@@ -1,2 +1,3 @@
-fixa boileplate, js och reset
-aktivera sass
+Fixa compass.
+Laga js
+flytta modules till varje enskild fil?

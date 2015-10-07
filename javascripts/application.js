@@ -1,22 +1,4 @@
-
-//= require vendor/matter
-//= require vendor/_slideout18
-//= require vendor/_flickity
-//= require vendor/_sprint
-//= require fastclick
-//= require reqwest
-//= require js.cookie
-//= require utils/utils
-//= require modules/state
-//= require modules/introduction
-//= require modules/navigation_button
-//= require modules/quote_carousel
-//= require modules/demo
-//= require modules/overview
-//= require modules/about_quote
-//= require modules/pricing
-//= require modules/universal_analytics
-//= require modules/zenconomy_analytics
+// @koala-prepend "vendor/_sprint.js"
 
 // Init global app scope
 var app = {},
