@@ -1,0 +1,2 @@
+fixa boileplate, js och reset
+aktivera sass
