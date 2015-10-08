@@ -1,4 +1,7 @@
 // @koala-prepend "vendor/_sprint.js"
+// @koala-prepend "utils/utils.js"
+// @koala-prepend "modules/universal_analytics.js"
+// @koala-prepend "modules/zenconomy_analytics.js"
 
 // Init global app scope
 var app = {},
@@ -13,7 +16,7 @@ Utils.isIE();
 // Define all JS-modules, what selectors that triggers them and load em'
 
 modules = [
-//  {'name': 'Human',             'selector': 'html',                 'class': Human},
+ {'name': 'Human',             'selector': 'html',                 'class': Human},
 //  {'name': 'State',             'selector': '.dynamic__state',       'class': State},
 //  {'name': 'Introduction',      'selector': '.introduction',        'class': Introduction},
 //  {'name': 'Demo',              'selector': '.demo',                'class': Demo},
@@ -52,9 +55,9 @@ window.onload = function() {
 
 // Load fastclick.js. Triggers links faster on touch devices
 // https://github.com/ftlabs/fastclick
-if ('addEventListener' in document) {
-  document.addEventListener('DOMContentLoaded', function() {
-    FastClick.attach(document.body);
-  }, false);
-}
+//if ('addEventListener' in document) {
+//  document.addEventListener('DOMContentLoaded', function() {
+//    FastClick.attach(document.body);
+//  }, false);
+//}
 

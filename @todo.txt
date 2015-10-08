@@ -1,3 +1,17 @@
-Fixa compass.
-Laga js
+Hur ska jag centrera saker vertikalt?
+Fonter
+
+Högerspalten.
+
+Typografi:
+Rubriker över flera rader.
+Letter-spacing
+Fixa typografin
+
+
+Sätta upp ett vertical-grid m responsiveness
+
+
+
+fixa fastclick
 flytta modules till varje enskild fil?
