@@ -1,0 +1,20 @@
+//Horizontal grid
+=wideColumn
+	width: 100%
+	padding-right: $sidebar
+	overflow: auto
+	>*
+		float: right
+		padding: 0 8% base(2)
+		//max-width: 742px
+
+=thinColumn
+	width: $sidebar
+	position: fixed
+	right: 0
+	top: 0
+	height: 100%
+
+//Vertical grid
+@function base($count: 1)
+	@return #{24*$count}px

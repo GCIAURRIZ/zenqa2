@@ -1,17 +1,29 @@
-Hur ska jag centrera saker vertikalt?
-Fonter
+Ta bort button_default
+
 
 Högerspalten.
+logo som bakgrund istället
+
+
+Städa upp
+
+Sidfot
+Städa igen
 
 Typografi:
-Rubriker över flera rader.
+fixa baseline
 Letter-spacing
-Fixa typografin
+signaturerna.
+Fixa rubbarna, med frågetecken och sånt
 
+Mobile
 
-Sätta upp ett vertical-grid m responsiveness
+rensa upp svg:n
 
+sätta max-bredd
 
-
+JS:
 fixa fastclick
 flytta modules till varje enskild fil?
+
+cp-sticky i högermenyn

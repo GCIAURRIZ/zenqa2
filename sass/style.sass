@@ -1,75 +1,25 @@
 //Reset
 @import "reset"
-@import "fonts"
-//Colors
-$black: #4A4A4A
-$green: #009B58
-$darkGreen: #06452A
-$blue: #378DF1
-$darkBlue: #1E62A5
-$yellow: #FFBB2F
-$darkYellow: #6C4B00
+@import "defaults"
+@import "variables"
+@import "grid"
+@import "button"
+@import "content"
+//@import "baseline"
 
-//Horizontal grid
-$golden: 1.618
 
-=wideColumn
-	width: percentage(1/$golden)
-	overflow: auto
-	>*
-		float: right
-		max-width: 742px
-
-=thinColumn
-	width: percentage(1-(1/$golden))
-	position: fixed
-	right: 0
-	top: 0
-	height: 100%
-
-//Vertical grid
-$base: 24px
-$base2: 48px
-$base3: 72px
-
-//typography
-=header
-	font-size: 32px
-	font-weight: bold
-	line-height: $base3
-	padding-top: $base
-	text-align: center
-
-=text
-	p
-		line-height: $base
-		margin-top: $base
-
-=author
-	text-align: right
-	margin-top: $base
-	.formal
+//Marketing
+=ad
+	display: block
+	background: $blue
+	padding: base(2) 0
+	.logo
 		display: block
-
-//Margins
-=padding
-	padding: 0 8% $base2
-
-
-
-//Defaults
-html
-	height: 100%
-	color: white
-
-body
-	min-height: 100%
-	font-size: 18px
-	line-height: $base
-	font-family: gt-haptik, Arial, sans-serif
-	font-weight: 400
-	// -webkit-font-smoothing: antialiased
-	// -moz-osx-font-smoothing: grayscale
+		.logotype-icon
+			margin: 0 auto
+			display: block
+			width: 197px
+			height: base(2)
 
 //main areas.
 .question__wrapper
@@ -77,8 +27,7 @@ body
 	background: $green
 
 .question
-	+padding
-	padding-top: $base
+	padding-top: base()
 	.question__title
 		+header
 	.question__text
@@ -92,7 +41,6 @@ body
 	color: $black
 
 .answer
-	+padding
 	.answer__header
 		+header
 	.answer__text
@@ -103,8 +51,8 @@ body
 	background: $black
 	+thinColumn
 
-.context__cta
-	+padding
-	background: $blue
+.cta
+	+ad
 
-
+.cta__header
+	+smallHeader
