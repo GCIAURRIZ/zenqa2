@@ -1,6 +1,6 @@
 //Horizontal grid
 =wideColumn
-	width: 100%
+	padding-top: base()
 	padding-right: $sidebar
 	overflow: auto
 	>*
@@ -9,11 +9,25 @@
 		//max-width: 742px
 
 =thinColumn
-	width: $sidebar
-	position: fixed
+	padding-top: base()
+	position: absolute
 	right: 0
 	top: 0
 	height: 100%
+	>*
+		padding: 0 10% base(2)
+		width: $sidebar
+	>*:last-child
+		min-height: 100%
+
+=alternatives
+	padding-top: base(2)
+	>*
+		position: relative
+		padding-bottom: base()
+		border-bottom: 1px solid white
+	>*:last-child
+		border-bottom: 0
 
 //Vertical grid
 @function base($count: 1)

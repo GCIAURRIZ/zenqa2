@@ -1,0 +1,118 @@
+//typography
+=header
+	font-size: 32px
+	font-weight: bold
+	line-height: base(3)
+	padding-top: base()
+	text-align: center
+
+=smallHeader
+	font-size: 28px
+	line-height: base(1.5)
+	text-align: center
+	font-weight: bold
+
+=text
+	p
+		line-height: base()
+		margin-top: base()
+
+=author
+	text-align: right
+	margin-top: base()
+	.formal
+		display: block
+
+=input
+	margin-top: base()
+	font-size: base()
+	height: $button-height
+	line-height: $button-height+1
+	border: 0
+	+borderRadius()
+	width: 278px
+
+=list
+	padding-top: base()
+	display: table
+	li
+		display: table-row
+		&:before
+			padding-top: base(0.5)
+			text-align: center
+			width: base()
+			display: table-cell
+			content: "\00bb"
+
+=logo
+	display: block
+	padding: base() 0
+	.logotype-icon
+		margin: 0 auto
+		display: block
+		width: 197px
+		height: base(2)
+
+=altLabel
+	background: $black
+	position: absolute
+	left: 50%
+	padding: 0 base()
+	top: base(-0.5)
+	margin: 0 auto
+	text-align: center
+	transform: translateX(-50%)
+
+=buttonStye
+	text-decoration: none
+	width: 300px
+	display: block
+	font-size: 18px
+	height: $button-height
+	line-height: ($button-height)+1
+	+borderRadius
+	text-align: center
+	margin: 0 auto
+	border: 0
+
+
+=button($type: block)
+	+buttonStye
+	margin-top: base()
+	@if $type == 'inline'
+		float: right
+		display: inline-block
+		width: auto
+		padding: 0 base()
+
+=spinButton
+	padding-top: base()
+	-webkit-perspective: 1000
+
+	.button__link
+		+buttonStye
+		transform: translate3d(0, 0, 0)
+
+	.button__hover
+		+buttonStye
+		font-size: 15px
+		transform: rotateX(-90deg) translateZ(-$button-height/2)
+
+	//Pixel-hack
+	.button__default
+		+borderRadius()
+
+	//Disable spinning in IE.
+	body.ie & .button__hover
+		display: none
+
+	//spinning part
+	body:not(.ie) & .hoverable
+		transition: all 150ms ease
+		transform-style: preserve-3d
+
+		.button__default
+			transform: translateZ($button-height/2)
+
+		&:hover
+			transform: rotateX(90deg)

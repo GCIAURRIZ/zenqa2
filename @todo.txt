@@ -1,20 +1,17 @@
-Ta bort button_default
-
-
-Högerspalten.
-logo som bakgrund istället
-
-
-Städa upp
-
 Sidfot
 Städa igen
 
+kommentarer
+
 Typografi:
-fixa baseline
+Fel font
+Fixa rubbarna, med frågetecken och sånt
+tweaka baseline med position: relative, baserat på font-size mixin.
 Letter-spacing
 signaturerna.
-Fixa rubbarna, med frågetecken och sånt
+Fontstrul
+
+Kommentarer
 
 Mobile
 
@@ -27,3 +24,5 @@ fixa fastclick
 flytta modules till varje enskild fil?
 
 cp-sticky i högermenyn
+
+Fixa andar vyer

@@ -1,39 +1,25 @@
+//Components only have padding top. Any padding-bottom goes in grid.
+@import "variables"
+@import "grid"
 //Reset
 @import "reset"
 @import "defaults"
-@import "variables"
-@import "grid"
-@import "button"
-@import "content"
+
+@import "components"
+
 //@import "baseline"
 
 
-//Marketing
-=ad
-	display: block
-	background: $blue
-	padding: base(2) 0
-	.logo
-		display: block
-		.logotype-icon
-			margin: 0 auto
-			display: block
-			width: 197px
-			height: base(2)
-
-//main areas.
 .question__wrapper
 	+wideColumn
 	background: $green
-
-.question
-	padding-top: base()
-	.question__title
-		+header
-	.question__text
-		+text
-	.question__author
-		+author
+	.question
+		.question__title
+			+header
+		.question__text
+			+text
+		.question__author
+			+author
 
 
 .answer__wrapper
@@ -47,12 +33,58 @@
 		+text
 	.answer__author
 		+author
+
 .context
-	background: $black
+	background: $blue
 	+thinColumn
 
-.cta
-	+ad
+.cta__logo
+	+logo
 
 .cta__header
 	+smallHeader
+
+.cta__button
+	+spinButton
+
+	.button__default
+		color: $darkYellow
+		background: $yellow
+
+	.button__hover
+		color: white
+		background: $green
+
+.alts
+	background: $black
+	+alternatives
+
+.alts__info__header
+	+smallHeader
+
+.alts__info__text
+	+text
+
+.alts__question__button
+	+button
+	color: $darkYellow
+	background: $yellow
+
+
+.alts__search__label
+	+altLabel
+	font-style: italic
+
+.alts__search__input
+	+input
+
+.alts__search__button
+	+button('inline')
+	color: $darkYellow
+	background: $yellow
+
+.alts__other__label
+	+altLabel
+
+.alts__other__questions
+	+list
