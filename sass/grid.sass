@@ -3,6 +3,8 @@
 	padding-top: base()
 	padding-right: $sidebar
 	overflow: auto
+	&:first-of-type
+		padding-top: base(2)
 	>*
 		float: right
 		padding: 0 8% base(2)
@@ -21,14 +23,44 @@
 		min-height: 100%
 
 =alternatives
-	padding-top: base(2)
+	padding-top: base()
+	>*:first-child::before
+		content: initial
 	>*
 		position: relative
 		padding-bottom: base()
-		border-bottom: 1px solid white
-	>*:last-child
-		border-bottom: 0
+		+border-top(white)
 
+=comments
+	margin-left: base(1.5)
+
+=comment
+	+border-top($black)
+	margin-top: base(1)
+	&:first-of-type
+		&::before
+			content: initial
+		margin-top: 0
+
+=border-top($color)
+	&::before
+		content: ''
+		height: 1px
+		background: $color
+		display: block
+		margin-top: -1px
 //Vertical grid
-@function base($count: 1)
-	@return #{24*$count}px
+$baseline: 24
+
+
+@function base($count: 1, $offset: 0)
+	$val: $baseline*$count + $offset
+	@return $val + px
+
+//@if $line-height ..
+=font-size($font-size, $line-height: $baseline, $cap-height: 0.7)
+	$baseline-distance: ($line-height - ($cap-height*$font-size)) / 2
+	font-size: $font-size + px
+	line-height: $line-height + px
+	position: relative
+	top: $baseline-distance + px

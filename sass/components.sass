@@ -1,52 +1,83 @@
 //typography
 =header
-	font-size: 32px
 	font-weight: bold
-	line-height: base(3)
+	+font-size(32)
 	padding-top: base()
 	text-align: center
 
+
+=mediumHeader
+	+font-size(24)
+	padding-top: base()
+	text-align: left
+	font-weight: bold
+
 =smallHeader
-	font-size: 28px
-	line-height: base(1.5)
+	+font-size(28)
+	padding-top: base()
 	text-align: center
 	font-weight: bold
 
 =text
 	p
-		line-height: base()
+		+font-size(18)
 		margin-top: base()
 
-=author
-	text-align: right
-	margin-top: base()
+=smallText
+	p
+		+font-size(14)
+		margin-top: base(0.5)
+
+=formal
 	.formal
 		display: block
+		color: $blue
+		font-weight: bold
+
+=author
+	+font-size(18)
+	text-align: right
+	+formal
+
+=ad
+	.cta__logo
+		+logo
+	.cta__header
+		padding-top: base(.5)
+		+font-size(28, $baseline*1.5)
+		text-align: center
+		font-weight: bold
+	.cta__button
+		padding-top: base(1.5)
+		+spinButton
+
+=smallAuthor
+	+font-size(14)
+	text-align: right
+	+formal
 
 =input
 	margin-top: base()
 	font-size: base()
+	padding-left: base(.5)
 	height: $button-height
-	line-height: $button-height+1
+	line-height: $button-height
 	border: 0
 	+borderRadius()
 	width: 278px
 
 =list
-	padding-top: base()
-	display: table
+	padding-top: base(.5)
+	padding-left: base(1.5)
 	li
-		display: table-row
-		&:before
-			padding-top: base(0.5)
-			text-align: center
-			width: base()
-			display: table-cell
-			content: "\00bb"
+		+font-size(18)
+		background: image-uri('test.svg')
+		//list-style-image: url('data:image/svg+xml;<svg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 9 9'><text x='0' y='8'>x</text></svg>')
+		padding-top: base(.5)
 
 =logo
 	display: block
-	padding: base() 0
+	padding-top: base()
 	.logotype-icon
 		margin: 0 auto
 		display: block
@@ -69,7 +100,7 @@
 	display: block
 	font-size: 18px
 	height: $button-height
-	line-height: ($button-height)+1
+	line-height: $button-height
 	+borderRadius
 	text-align: center
 	margin: 0 auto
@@ -86,7 +117,6 @@
 		padding: 0 base()
 
 =spinButton
-	padding-top: base()
 	-webkit-perspective: 1000
 
 	.button__link

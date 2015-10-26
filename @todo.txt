@@ -1,17 +1,29 @@
-Sidfot
-Städa igen
+Göra om list-items som nu är bulletpoints,svg
+background: url('data:image/svg+xml; ... ');
+http://stackoverflow.com/questions/33299453/inline-svg-from-a-file-with-sass/33302941#33302941
 
-kommentarer
+bulletpoint-positionen
+
+
+Städa igen – Sortera components, vända på style, custom-grejjer separat isf?
+Plocka ut siffror ur components.
+i nuläget finns en system-standard font som inte används
+Döpa om componenter kanske
+
+Sidfot
+
+Kommentarsrutor
+Kommentarer på frågan
+Kommentarknapp
+
+
+
 
 Typografi:
 Fel font
-Fixa rubbarna, med frågetecken och sånt
-tweaka baseline med position: relative, baserat på font-size mixin.
+Fixa rubbarna, med frågetecken och sånt, header ska ha en till base i bottom-marginal eller nått.
 Letter-spacing
 signaturerna.
-Fontstrul
-
-Kommentarer
 
 Mobile
 
@@ -19,9 +31,8 @@ rensa upp svg:n
 
 sätta max-bredd
 
-JS:
 fixa fastclick
-flytta modules till varje enskild fil?
+flytta js-modules till varje enskild fil?
 
 cp-sticky i högermenyn
 

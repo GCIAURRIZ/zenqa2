@@ -1,7 +1,7 @@
 //Components only have padding top. Any padding-bottom goes in grid.
-@import "variables"
 @import "grid"
-//Reset
+@import "variables"
+
 @import "reset"
 @import "defaults"
 
@@ -29,31 +29,41 @@
 .answer
 	.answer__header
 		+header
+		color: $green
 	.answer__text
 		+text
 	.answer__author
 		+author
 
+.answer__comments__header
+	+mediumHeader
+	color: $yellow
+
+.answer__comments
+	+comments
+	.answer__comment
+		+comment
+	.answer__comment__text
+		+smallText
+	.answer__comment__author
+		+smallAuthor
+
+
 .context
 	background: $blue
 	+thinColumn
 
-.cta__logo
-	+logo
+.cta
+	+ad
 
-.cta__header
-	+smallHeader
+	.cta__button
+		.button__default
+			color: $darkYellow
+			background: $yellow
 
-.cta__button
-	+spinButton
-
-	.button__default
-		color: $darkYellow
-		background: $yellow
-
-	.button__hover
-		color: white
-		background: $green
+		.button__hover
+			color: white
+			background: $green
 
 .alts
 	background: $black
