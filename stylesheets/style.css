@@ -188,29 +188,6 @@ textarea {
   src: url(image-path("fonts/relative-faux-webfont.eot")) format("embedded-opentype"), url(image-path("fonts/relative-faux-webfont.woff2")) format("woff2"), url(image-path("fonts/relative-faux-webfont.woff")) format("woff"), url(image-path("fonts/relative-faux-webfont.ttf")) format("truetype"), url(image-path("fonts/relative-faux-webfont.svg")) format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 1, ../sass/baseline.sass */
-body {
-  position: relative; }
-
-/* line 4, ../sass/baseline.sass */
-body:after {
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 9999;
-  content: "";
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../image.png) repeat top left; }
-
-/* line 18, ../sass/baseline.sass */
-body:active:after {
-  display: none; }
-
 /* line 14, ../sass/style.sass */
 .question__wrapper, .answer__wrapper {
   padding-top: 24px;
@@ -418,17 +395,21 @@ body:active:after {
 /* line 49, ../sass/style.sass */
 .question__author, .answer__author, .question__comment__author, .answer__comment__author {
   text-align: right;
-  margin-top: 24px; }
+  margin-top: 24px;
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  top: 5.7px; }
   /* line 54, ../sass/components.sass */
   .question__author .formal, .answer__author .formal, .question__comment__author .formal, .answer__comment__author .formal {
     display: block;
     color: #378DF1;
     font-weight: bold; }
 
-/* line 65, ../sass/components.sass */
+/* line 66, ../sass/components.sass */
 .cta .cta__logo {
   padding-top: 24px; }
-/* line 67, ../sass/components.sass */
+/* line 68, ../sass/components.sass */
 .cta .cta__header {
   padding-top: 12px;
   font-size: 28px;
@@ -437,10 +418,10 @@ body:active:after {
   top: 8.2px;
   text-align: center;
   font-weight: bold; }
-/* line 72, ../sass/components.sass */
+/* line 73, ../sass/components.sass */
 .cta .cta__button {
   padding-top: 36px; }
-  /* line 118, ../sass/components.sass */
+  /* line 119, ../sass/components.sass */
   .cta .cta__button .button__link {
     text-decoration: none;
     width: 300px;
@@ -453,7 +434,7 @@ body:active:after {
     margin: 0 auto;
     border: 0;
     transform: translate3d(0, 0, 0); }
-  /* line 122, ../sass/components.sass */
+  /* line 123, ../sass/components.sass */
   .cta .cta__button .button__hover {
     text-decoration: none;
     width: 300px;
@@ -467,20 +448,20 @@ body:active:after {
     border: 0;
     font-size: 14px;
     transform: rotateX(-90deg) translateZ(-24px); }
-  /* line 128, ../sass/components.sass */
+  /* line 129, ../sass/components.sass */
   .cta .cta__button .button__default {
     border-radius: 4px; }
-  /* line 132, ../sass/components.sass */
+  /* line 133, ../sass/components.sass */
   body.ie .cta .cta__button .button__hover {
     display: none; }
-  /* line 136, ../sass/components.sass */
+  /* line 137, ../sass/components.sass */
   body:not(.ie) .cta .cta__button .hoverable {
     transition: all 150ms ease;
     transform-style: preserve-3d; }
-    /* line 140, ../sass/components.sass */
+    /* line 141, ../sass/components.sass */
     body:not(.ie) .cta .cta__button .hoverable .button__default {
       transform: translateZ(24px); }
-    /* line 143, ../sass/components.sass */
+    /* line 144, ../sass/components.sass */
     body:not(.ie) .cta .cta__button .hoverable:hover {
       transform: rotateX(90deg); }
 
@@ -489,7 +470,7 @@ body:active:after {
   display: block;
   margin: 0 auto;
   width: 197px; }
-  /* line 80, ../sass/components.sass */
+  /* line 81, ../sass/components.sass */
   .footer__logotype .logotype-icon, .cta__logo .logotype-icon {
     width: 197px;
     display: block;
@@ -590,3 +571,9 @@ body:active:after {
 /* line 109, ../sass/style.sass */
 .answer__wrapper {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTYwcHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDU2MCAxMC4wOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTYwIDEwLjA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMDlCNTgiIGQ9Ik0wLDBoNTYwYzAsMS4zNDYsMC0wLjY3MywwLDAuNTA0bC0yMC4wMTIsOS41ODZsLTIwLjAxMy05LjU4NmwtMjAuMDEzLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4Ng0KCQlsLTIwLjAxMi05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZMMzc5Ljg5LDEwLjA5bC0yMC4wMTMtOS41ODZsLTE5Ljg0NCw5LjU4NkwzMjAuMDIsMC41MDRsLTIwLjAxMiw5LjU4NkwyODAsMC41MDQNCgkJbC0yMC4wMTIsOS41ODZsLTIwLjAxNC05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4NmwtMjAuMDEyLTkuNTg2bC0yMC4wMTIsOS41ODZsLTIwLjAxMi05LjU4NmwtMTkuODQ0LDkuNTg2DQoJCUw4MC4wNDUsMC41MDRMNjAuMDMzLDEwLjA5TDQwLjAyMSwwLjUwNEwyMC4wMDgsMTAuMDlMMCwwLjUwNEMwLDAsMCwwLjE2OCwwLDB6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==') white repeat-x; }
+
+/* line 113, ../sass/style.sass */
+.question__title svg {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle; }
