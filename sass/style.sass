@@ -3,98 +3,108 @@
 @import "variables"
 
 @import "reset"
+@import "flexbox"
 @import "defaults"
 
 @import "components"
 
-//@import "baseline"
+@import "baseline"
 
-
-.question__wrapper
-	+wideColumn
-	background: $green
-	.question
-		.question__title
-			+header
-		.question__text
-			+text
-		.question__author
-			+author
-
-
-.answer__wrapper
-	+wideColumn
-	color: $black
-
-.answer
-	.answer__header
-		+header
-		color: $green
-	.answer__text
-		+text
-	.answer__author
-		+author
-
-.answer__comments__header
-	+mediumHeader
-	color: $yellow
-
-.answer__comments
-	+comments
-	.answer__comment
-		+comment
-	.answer__comment__text
-		+smallText
-	.answer__comment__author
-		+smallAuthor
-
+//Grid and layout
+.question__wrapper, .answer__wrapper
+	+content
 
 .context
-	background: $blue
-	+thinColumn
-
-.cta
-	+ad
-
-	.cta__button
-		.button__default
-			color: $darkYellow
-			background: $yellow
-
-		.button__hover
-			color: white
-			background: $green
-
+	+sidebar
+.question__comment, .answer__comment
+	+comment
 .alts
-	background: $black
 	+alternatives
+.footer
+	+footer
 
+//standard components
+.question__title, 	.answer__header
+	+h1
+.question__comments__header, .answer__comments__header
+	+h2
 .alts__info__header
-	+smallHeader
-
-.alts__info__text
+	+h2alt
+.question__text, .answer__text, .alts__info__text
 	+text
-
-.alts__question__button
-	+button
-	color: $darkYellow
-	background: $yellow
-
-
-.alts__search__label
-	+altLabel
-	font-style: italic
-
-.alts__search__input
-	+input
-
-.alts__search__button
-	+button('inline')
-	color: $darkYellow
-	background: $yellow
-
-.alts__other__label
-	+altLabel
-
+.question__comment__text, .answer__comment__text
+	+smallText
 .alts__other__questions
 	+list
+.alts__search__input
+	+input
+.alts__question__button, .question__response__show, .answer__response__show
+	+button
+.alts__search__button, .question__response__button, .answer__response__button, .answer__comment__response__button
+	+button('inline')
+
+//Custom
+.question__comments, .answer__comments
+	margin-left: base(1.5)
+.question__author, .answer__author, .question__comment__author, .answer__comment__author
+	+author
+.cta
+	+ad
+.footer__logotype, .cta__logo
+	+logo
+
+.alts__search__label, .alts__other__label
+	+altLabel
+.footer
+	+footerStyle
+
+//Colors
+.question__wrapper
+	background: $green
+.question__response__show, .question__response__button, .answer__response__show, .answer__response__button, .answer__comment__response__button
+	background: $yellow
+	color: $darkYellow
+.question__response__textarea
+	border-color: $darkGreen
+.answer__wrapper
+	color: $black
+.answer__header
+	color: $green
+.answer__comments__header
+	color: $yellow
+.context
+	background: $blue
+.cta__button
+	.button__default
+		color: $darkYellow
+		background: $yellow
+	.button__hover
+		color: white
+		background: $green
+.alts
+	background: $black
+
+.alts__question__button, .alts__search__button
+	color: $darkYellow
+	background: $yellow
+
+.footer
+	background: $blue
+
+.footer-navigation__title
+	color: black
+
+.footer-navigation__link
+	color: white
+	&:hover
+		color: $darkerBlue
+
+//Custom styles
+.alts__search__label
+	font-style: italic
+.question__comment__author, .answer__comment__author
+	+font-size(14)
+	margin-top: 0
+
+.answer__wrapper
+	background: inline-image("edge.svg") white repeat-x

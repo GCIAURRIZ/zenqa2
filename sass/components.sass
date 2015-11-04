@@ -1,60 +1,40 @@
 //typography
-=header
+=h1
 	font-weight: bold
-	+font-size(32)
+	+font-size($xLarge)
 	padding-top: base()
 	text-align: center
 
 
-=mediumHeader
-	+font-size(24)
+=h2
+	+font-size($medium)
 	padding-top: base()
 	text-align: left
 	font-weight: bold
 
-=smallHeader
-	+font-size(28)
+=h2alt
+	+font-size($large)
 	padding-top: base()
 	text-align: center
 	font-weight: bold
 
 =text
 	p
-		+font-size(18)
+		+font-size($small)
 		margin-top: base()
 
 =smallText
 	p
-		+font-size(14)
+		+font-size($xSmall)
 		margin-top: base(0.5)
 
-=formal
-	.formal
-		display: block
-		color: $blue
-		font-weight: bold
-
-=author
-	+font-size(18)
-	text-align: right
-	+formal
-
-=ad
-	.cta__logo
-		+logo
-	.cta__header
+=list
+	padding-top: base(.5)
+	padding-left: 27px
+	li
+		+font-size($small)
+		list-style-image: inline-image("arrow.svg")
 		padding-top: base(.5)
-		+font-size(28, $baseline*1.5)
-		text-align: center
-		font-weight: bold
-	.cta__button
-		padding-top: base(1.5)
-		+spinButton
-
-=smallAuthor
-	+font-size(14)
-	text-align: right
-	+formal
 
 =input
 	margin-top: base()
@@ -64,24 +44,42 @@
 	line-height: $button-height
 	border: 0
 	+borderRadius()
-	width: 278px
+	width: $inputW
 
-=list
-	padding-top: base(.5)
-	padding-left: base(1.5)
-	li
-		+font-size(18)
-		background: image-uri('test.svg')
-		//list-style-image: url('data:image/svg+xml;<svg xmlns='http://www.w3.org/2000/svg' width='9' height='9' viewBox='0 0 9 9'><text x='0' y='8'>x</text></svg>')
+=footerStyle
+	+font-size($small)
+
+
+=formal
+	.formal
+		display: block
+		color: $blue
+		font-weight: bold
+
+=author
+	text-align: right
+	margin-top: base()
+	+formal
+
+=ad
+	.cta__logo
+		padding-top: base()
+	.cta__header
 		padding-top: base(.5)
+		+font-size($large, $baseline*1.5)
+		text-align: center
+		font-weight: bold
+	.cta__button
+		padding-top: base(1.5)
+		+spinButton
 
 =logo
 	display: block
-	padding-top: base()
+	margin: 0 auto
+	width: 197px
 	.logotype-icon
-		margin: 0 auto
+		width: $logoW
 		display: block
-		width: 197px
 		height: base(2)
 
 =altLabel
@@ -94,11 +92,11 @@
 	text-align: center
 	transform: translateX(-50%)
 
-=buttonStye
+=buttonStyle
 	text-decoration: none
-	width: 300px
+	width: $buttonW
 	display: block
-	font-size: 18px
+	font-size: $small+px
 	height: $button-height
 	line-height: $button-height
 	+borderRadius
@@ -108,7 +106,7 @@
 
 
 =button($type: block)
-	+buttonStye
+	+buttonStyle
 	margin-top: base()
 	@if $type == 'inline'
 		float: right
@@ -117,15 +115,13 @@
 		padding: 0 base()
 
 =spinButton
-	-webkit-perspective: 1000
-
 	.button__link
-		+buttonStye
+		+buttonStyle
 		transform: translate3d(0, 0, 0)
 
 	.button__hover
-		+buttonStye
-		font-size: 15px
+		+buttonStyle
+		font-size: $xSmall+px
 		transform: rotateX(-90deg) translateZ(-$button-height/2)
 
 	//Pixel-hack
@@ -136,7 +132,7 @@
 	body.ie & .button__hover
 		display: none
 
-	//spinning part
+	//spinny part
 	body:not(.ie) & .hoverable
 		transition: all 150ms ease
 		transform-style: preserve-3d

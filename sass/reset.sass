@@ -50,3 +50,49 @@ table
 
 *:focus
   outline: -webkit-focus-ring-color auto 0
+
+/* Reset `button` and button-style `input` default styles */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+button
+  background: none
+  border: 0
+  color: inherit
+  /* cursor: default */
+  font: inherit
+  line-height: normal
+  overflow: visible
+  padding: 0
+  -webkit-appearance: button /* for input */
+  -webkit-user-select: none /* for button */
+  -moz-user-select: none
+  -ms-user-select: none
+
+input::-moz-focus-inner,
+button::-moz-focus-inner
+  border: 0
+  padding: 0
+
+
+
+.visuallyhidden
+  border: 0
+  clip: rect(0 0 0 0)
+  height: 1px
+  margin: -1px
+  overflow: hidden
+  padding: 0
+  position: absolute
+  width: 1px
+
+  // Extends the .visuallyhidden class to allow the element to be focusable
+  // when navigated to via the keyboard: h5bp.com/p
+  &.focusable:active,
+  &.focusable:focus
+    clip: auto
+    height: auto
+    margin: 0
+    overflow: visible
+    position: static
+    width: auto

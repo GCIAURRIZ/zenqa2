@@ -1,33 +1,15 @@
-Göra om list-items som nu är bulletpoints,svg
-background: url('data:image/svg+xml; ... ');
-http://stackoverflow.com/questions/33299453/inline-svg-from-a-file-with-sass/33302941#33302941
-
-bulletpoint-positionen
-
-
-Städa igen – Sortera components, vända på style, custom-grejjer separat isf?
-Plocka ut siffror ur components.
-i nuläget finns en system-standard font som inte används
-Döpa om componenter kanske
-
-Sidfot
-
-Kommentarsrutor
-Kommentarer på frågan
-Kommentarknapp
-
-
-
 
 Typografi:
-Fel font
 Fixa rubbarna, med frågetecken och sånt, header ska ha en till base i bottom-marginal eller nått.
 Letter-spacing
 signaturerna.
 
-Mobile
+You can have one site per GitHub repository. Repositories other than "username.github.io" will be published at http://username.github.io/REPONAME. Those repositories will publish whatever you push to the "gh-pages" branch.
+
 
 rensa upp svg:n
+
+fixa iconer, meny radavstånd.
 
 sätta max-bredd
 
@@ -37,3 +19,60 @@ flytta js-modules till varje enskild fil?
 cp-sticky i högermenyn
 
 Fixa andar vyer
+
+:focus
+
+Mobile
+@media screen and (max-width: 1130px)
+	.footer
+		padding: 0 50px
+
+	.footer-navigation__section
+		margin-right: 60px
+
+
+@media screen and (max-width: 1000px)
+	.footer
+		height: 356px
+	//	padding: 0 $default-side-padding-mobile
+		font-size: 16px
+		line-height: 32px
+
+	.footer__logotype
+		margin-top: 126px
+
+	.footer-navigation__section
+		margin-right: 40px
+
+	.footer__logotype-icon
+		width: 171px
+		height: 29px
+
+@media screen and (max-width: 840px)
+	.footer
+		height: auto
+		padding: 50px 38px
+		position: relative
+
+	.footer__logotype
+		position: absolute
+	//	right: $default-side-padding-mobile
+		bottom: 50px
+
+	.footer__logotype-icon
+		display: none
+
+	.footer-navigation
+		float: none
+		margin-top: 0
+		display: block
+
+	.footer-navigation__section
+		margin-right: 0
+
+	.footer-navigation__section:nth-of-type(1),
+	.footer-navigation__section:nth-of-type(2)
+		display: none
+
+	.footer-navigation__section:nth-of-type(3)
+		margin-bottom: 28px
