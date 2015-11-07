@@ -134,7 +134,7 @@ html {
 
 /* line 6, ../sass/defaults.sass */
 body {
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
   min-height: 100%;
   line-height: 24px;
   font-family: gt-haptik, Arial, sans-serif;
@@ -161,7 +161,7 @@ textarea {
   width: 100%;
   line-height: 24px;
   height: 72px;
-  border: 1px solid #4A4A4A;
+  border: 1px solid #CCC;
   background: #E7F2FF;
   font-size: inherit;
   padding: 0 5px; }
@@ -190,6 +190,29 @@ textarea {
   src: url(image-path("fonts/relative-faux-webfont.eot")) format("embedded-opentype"), url(image-path("fonts/relative-faux-webfont.woff2")) format("woff2"), url(image-path("fonts/relative-faux-webfont.woff")) format("woff"), url(image-path("fonts/relative-faux-webfont.ttf")) format("truetype"), url(image-path("fonts/relative-faux-webfont.svg")) format("svg");
   font-weight: normal;
   font-style: normal; }
+/* line 1, ../sass/baseline.sass */
+body {
+  position: relative; }
+
+/* line 4, ../sass/baseline.sass */
+body:after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  content: "";
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../image.png) repeat top left; }
+
+/* line 18, ../sass/baseline.sass */
+body:active:after {
+  display: none; }
+
 /* line 14, ../sass/style.sass */
 .question__wrapper, .answer__wrapper {
   padding-top: 24px;
@@ -292,15 +315,46 @@ textarea {
         margin-top: 12px; }
 
 /* line 27, ../sass/style.sass */
-.question__title, .answer__header {
+.question__title {
   font-weight: bold;
   font-size: 32px;
   line-height: 36px;
   position: relative;
   top: 6.8px;
-  padding-top: 24px; }
+  margin-top: 24px;
+  text-align: center;
+  text-align: left; }
+  /* line 7, ../sass/components.sass */
+  .question__title svg {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle; }
+  /* line 13, ../sass/components.sass */
+  .question__title svg {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+  /* line 17, ../sass/components.sass */
+  .question__title span {
+    padding-left: 70px;
+    display: block; }
 
 /* line 29, ../sass/style.sass */
+.answer__header {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 36px;
+  position: relative;
+  top: 6.8px;
+  margin-top: 24px;
+  text-align: center; }
+  /* line 7, ../sass/components.sass */
+  .answer__header svg {
+    width: 60px;
+    height: 60px;
+    vertical-align: middle; }
+
+/* line 31, ../sass/style.sass */
 .question__comments__header, .answer__comments__header {
   font-size: 24px;
   line-height: 24px;
@@ -310,7 +364,7 @@ textarea {
   text-align: left;
   font-weight: bold; }
 
-/* line 31, ../sass/style.sass */
+/* line 33, ../sass/style.sass */
 .alts__question__header {
   font-size: 28px;
   line-height: 24px;
@@ -321,15 +375,16 @@ textarea {
   font-weight: bold;
   padding-bottom: 12px; }
 
-/* line 22, ../sass/components.sass */
+/* line 35, ../sass/components.sass */
 .question__text p, .answer__text p {
   font-size: 18px;
   line-height: 24px;
   position: relative;
   top: 5.7px;
-  margin-top: 24px; }
+  margin-top: 24px;
+  letter-spacing: 0.06em; }
 
-/* line 27, ../sass/components.sass */
+/* line 41, ../sass/components.sass */
 .question__comment__text p, .answer__comment__text p {
   font-size: 14px;
   line-height: 24px;
@@ -337,10 +392,10 @@ textarea {
   top: 7.1px;
   margin-top: 12px; }
 
-/* line 37, ../sass/style.sass */
+/* line 39, ../sass/style.sass */
 .alts__other__questions {
-  padding-left: 27px; }
-  /* line 33, ../sass/components.sass */
+  padding-left: 22px; }
+  /* line 47, ../sass/components.sass */
   .alts__other__questions li {
     font-size: 18px;
     line-height: 24px;
@@ -349,7 +404,7 @@ textarea {
     list-style-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc5JyBoZWlnaHQ9JzknIHZpZXdCb3g9JzAgMCA5IDknPgoJPHRleHQKCQlmb250LWZhbWlseT0iZ3QtaGFwdGlrLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgICAgICB4PScwJwogICAgICAgIHk9JzknCiAgICAgICAgZmlsbD0id2hpdGUiCiAgICA+CiAgICAgICAgCSYjeGJiOwogICAgPC90ZXh0Pgo8L3N2Zz4=');
     padding-top: 12px; }
 
-/* line 39, ../sass/style.sass */
+/* line 41, ../sass/style.sass */
 .alts__search__input {
   margin-top: 24px;
   font-size: 24px;
@@ -360,7 +415,7 @@ textarea {
   border-radius: 4px;
   width: 278px; }
 
-/* line 41, ../sass/style.sass */
+/* line 43, ../sass/style.sass */
 .alts__question__button, .question__response__show, .answer__response__show {
   text-decoration: none;
   width: 300px;
@@ -374,7 +429,7 @@ textarea {
   border: 0;
   margin-top: 24px; }
 
-/* line 43, ../sass/style.sass */
+/* line 45, ../sass/style.sass */
 .alts__search__button, .question__response__button, .answer__response__button, .answer__comment__response__button {
   text-decoration: none;
   width: 300px;
@@ -392,12 +447,12 @@ textarea {
   width: auto;
   padding: 0 24px; }
 
-/* line 47, ../sass/style.sass */
+/* line 49, ../sass/style.sass */
 .question__comments, .answer__comments {
   margin-left: 36px;
   margin-top: 24px; }
 
-/* line 50, ../sass/style.sass */
+/* line 52, ../sass/style.sass */
 .question__author, .answer__author, .question__comment__author, .answer__comment__author {
   font-weight: bold;
   text-align: right;
@@ -405,16 +460,16 @@ textarea {
   line-height: 24px;
   position: relative;
   top: 5.7px; }
-  /* line 53, ../sass/components.sass */
+  /* line 67, ../sass/components.sass */
   .question__author .formal, .answer__author .formal, .question__comment__author .formal, .answer__comment__author .formal {
     display: block;
     color: #378DF1;
     font-weight: bold; }
 
-/* line 65, ../sass/components.sass */
+/* line 79, ../sass/components.sass */
 .cta .cta__logo {
   padding-top: 24px; }
-/* line 67, ../sass/components.sass */
+/* line 81, ../sass/components.sass */
 .cta .cta__header {
   padding-top: 12px;
   font-size: 28px;
@@ -423,10 +478,10 @@ textarea {
   top: 8.2px;
   text-align: center;
   font-weight: bold; }
-/* line 72, ../sass/components.sass */
+/* line 86, ../sass/components.sass */
 .cta .cta__button {
   padding-top: 36px; }
-  /* line 118, ../sass/components.sass */
+  /* line 134, ../sass/components.sass */
   .cta .cta__button .button__link {
     text-decoration: none;
     width: 300px;
@@ -439,7 +494,7 @@ textarea {
     margin: 0 auto;
     border: 0;
     transform: translate3d(0, 0, 0); }
-  /* line 122, ../sass/components.sass */
+  /* line 138, ../sass/components.sass */
   .cta .cta__button .button__hover {
     text-decoration: none;
     width: 300px;
@@ -453,35 +508,37 @@ textarea {
     border: 0;
     font-size: 14px;
     transform: rotateX(-90deg) translateZ(-24px); }
-  /* line 128, ../sass/components.sass */
+  /* line 144, ../sass/components.sass */
   .cta .cta__button .button__default {
     border-radius: 4px; }
-  /* line 132, ../sass/components.sass */
+  /* line 148, ../sass/components.sass */
   body.ie .cta .cta__button .button__hover {
     display: none; }
-  /* line 136, ../sass/components.sass */
+  /* line 152, ../sass/components.sass */
   body:not(.ie) .cta .cta__button .hoverable {
     transition: all 150ms ease;
     transform-style: preserve-3d; }
-    /* line 140, ../sass/components.sass */
+    /* line 156, ../sass/components.sass */
     body:not(.ie) .cta .cta__button .hoverable .button__default {
       transform: translateZ(24px); }
-    /* line 143, ../sass/components.sass */
+    /* line 159, ../sass/components.sass */
     body:not(.ie) .cta .cta__button .hoverable:hover {
       transform: rotateX(90deg); }
 
-/* line 54, ../sass/style.sass */
+/* line 56, ../sass/style.sass */
 .footer__logotype, .cta__logo {
   display: block;
   margin: 0 auto;
-  width: 197px; }
-  /* line 80, ../sass/components.sass */
+  width: 197px;
+  position: relative;
+  top: 2px; }
+  /* line 96, ../sass/components.sass */
   .footer__logotype .logotype-icon, .cta__logo .logotype-icon {
     width: 197px;
     display: block;
     height: 48px; }
 
-/* line 57, ../sass/style.sass */
+/* line 59, ../sass/style.sass */
 .alts__search__label, .alts__other__label {
   background: #4A4A4A;
   position: absolute;
@@ -492,80 +549,80 @@ textarea {
   text-align: center;
   transform: translateX(-50%); }
 
-/* line 59, ../sass/style.sass */
+/* line 61, ../sass/style.sass */
 .footer {
   font-size: 18px;
   line-height: 24px;
   position: relative;
   top: 5.7px; }
 
-/* line 63, ../sass/style.sass */
+/* line 65, ../sass/style.sass */
 .question__wrapper {
   background: #009B58; }
 
-/* line 65, ../sass/style.sass */
+/* line 67, ../sass/style.sass */
 .question__response__show, .question__response__button, .answer__response__show, .answer__response__button, .answer__comment__response__button {
   background: #FFBB2F;
   color: #6C4B00; }
 
-/* line 68, ../sass/style.sass */
+/* line 70, ../sass/style.sass */
 .question__response__textarea {
   border-color: #06452A; }
 
-/* line 70, ../sass/style.sass */
+/* line 72, ../sass/style.sass */
 .answer__wrapper {
   color: #4A4A4A; }
 
-/* line 72, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 .answer__header {
   color: #009B58; }
 
-/* line 74, ../sass/style.sass */
+/* line 76, ../sass/style.sass */
 .answer__comments__header {
   color: #FFBB2F; }
 
-/* line 76, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 .context {
   background: #378DF1; }
 
-/* line 79, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 .cta__button .button__default {
   color: #6C4B00;
   background: #FFBB2F; }
-/* line 82, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 .cta__button .button__hover {
   color: white;
   background: #009B58; }
 
-/* line 85, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 .alts {
   background: #4A4A4A; }
 
-/* line 88, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 .alts__question__button, .alts__search__button {
   color: #6C4B00;
   background: #FFBB2F; }
 
-/* line 92, ../sass/style.sass */
+/* line 94, ../sass/style.sass */
 .footer {
   background: #378DF1; }
 
-/* line 95, ../sass/style.sass */
+/* line 97, ../sass/style.sass */
 .footer-navigation__title {
   color: black; }
 
-/* line 98, ../sass/style.sass */
+/* line 100, ../sass/style.sass */
 .footer-navigation__link {
   color: white; }
-  /* line 100, ../sass/style.sass */
+  /* line 102, ../sass/style.sass */
   .footer-navigation__link:hover {
     color: #0d294a; }
 
-/* line 104, ../sass/style.sass */
+/* line 106, ../sass/style.sass */
 .alts__search__label {
   font-style: italic; }
 
-/* line 106, ../sass/style.sass */
+/* line 108, ../sass/style.sass */
 .question__comment__author, .answer__comment__author {
   font-size: 14px;
   line-height: 24px;
@@ -573,18 +630,6 @@ textarea {
   top: 7.1px;
   margin-top: 0; }
 
-/* line 110, ../sass/style.sass */
+/* line 112, ../sass/style.sass */
 .answer__wrapper {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTYwcHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDU2MCAxMC4wOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTYwIDEwLjA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMDlCNTgiIGQ9Ik0wLDBoNTYwYzAsMS4zNDYsMC0wLjY3MywwLDAuNTA0bC0yMC4wMTIsOS41ODZsLTIwLjAxMy05LjU4NmwtMjAuMDEzLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4Ng0KCQlsLTIwLjAxMi05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZMMzc5Ljg5LDEwLjA5bC0yMC4wMTMtOS41ODZsLTE5Ljg0NCw5LjU4NkwzMjAuMDIsMC41MDRsLTIwLjAxMiw5LjU4NkwyODAsMC41MDQNCgkJbC0yMC4wMTIsOS41ODZsLTIwLjAxNC05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4NmwtMjAuMDEyLTkuNTg2bC0yMC4wMTIsOS41ODZsLTIwLjAxMi05LjU4NmwtMTkuODQ0LDkuNTg2DQoJCUw4MC4wNDUsMC41MDRMNjAuMDMzLDEwLjA5TDQwLjAyMSwwLjUwNEwyMC4wMDgsMTAuMDlMMCwwLjUwNEMwLDAsMCwwLjE2OCwwLDB6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==') white repeat-x; }
-
-/* line 114, ../sass/style.sass */
-.question__title svg {
-  width: 60px;
-  height: 60px;
-  vertical-align: middle;
-  position: absolute;
-  top: 12px; }
-/* line 120, ../sass/style.sass */
-.question__title .question__title__text {
-  padding-left: 70px;
-  display: block; }

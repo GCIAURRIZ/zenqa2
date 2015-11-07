@@ -1,17 +1,8 @@
-Dubbelpilarnas indentering
-
 Typografi:
-Fixa rubbarna, indenta.
-Letter-spacing
-word-spacing
-
-Aligna zenlogo med baseline på menyn (relative offset när rubriken ligger rätt igen.)
-
 fixa icon på ställ en fråga-knappen mfl
+hover-cp på knappen.
 
-
-rensa upp svg:n
-
+länkar i högerspalten
 
 sätta max-bredd
 
@@ -21,9 +12,12 @@ flytta js-modules till varje enskild fil?
 cp-sticky i högermenyn
 
 Fixa andar vyer
-:focus
+Markerad text-färg
 
-Mobile
+rensa upp svg:n
+
+
+Mobile, lägg i varje komponent.(dubbla spaltbrädden kanske?)
 @media screen and (max-width: 1130px)
 	.footer
 		padding: 0 50px

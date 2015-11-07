@@ -1,9 +1,22 @@
 //typography
-=h1
+=h1($align: center)
 	font-weight: bold
 	+font-size($xLarge, $baseline*1.5)
-	padding-top: base()
-
+	margin-top: base()
+	text-align: center
+	svg
+		width: 60px
+		height: 60px
+		vertical-align: middle
+	@if $align  == 'left'
+		text-align: left
+		svg
+			position: absolute
+			top: 50%
+			transform: translateY(-50%)
+		span
+			padding-left: 70px
+			display: block
 
 =h2
 	+font-size($medium)
@@ -22,6 +35,7 @@
 	p
 		+font-size($small)
 		margin-top: base()
+		letter-spacing: 0.06em
 
 =smallText
 	p
@@ -29,7 +43,7 @@
 		margin-top: base(0.5)
 
 =list
-	padding-left: 27px
+	padding-left: 22px
 	li
 		+font-size($small)
 		list-style-image: inline-image("arrow.svg")
@@ -77,6 +91,8 @@
 	display: block
 	margin: 0 auto
 	width: 197px
+	position: relative
+	top: 2px
 	.logotype-icon
 		width: $logoW
 		display: block

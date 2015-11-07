@@ -27,12 +27,12 @@
 	>*
 		position: relative
 		padding-bottom: base(1.5)
-		+border-top(white)
+		+border-top
 		&::before
 			padding-top: base(.5)
 
 =comment
-	+border-top($black)
+	+border-top
 	margin-top: base(1.5)
 	&:first-of-type
 		margin-top: 0
@@ -61,7 +61,7 @@
 			&:first-of-type
 				margin-top: base(.5)
 
-=border-top($color)
+=border-top
 	&::before
 		content: ''
 		border-top-width: 1px

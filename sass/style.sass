@@ -8,7 +8,7 @@
 
 @import "components"
 
-//@import "baseline"
+@import "baseline"
 
 //Grid and layout
 .question__wrapper, .answer__wrapper
@@ -24,7 +24,9 @@
 	+footer
 
 //standard components
-.question__title, 	.answer__header
+.question__title
+	+h1('left')
+.answer__header
 	+h1
 .question__comments__header, .answer__comments__header
 	+h2
@@ -109,14 +111,3 @@
 
 .answer__wrapper
 	background: inline-image("edge.svg") white repeat-x
-
-.question__title
-	svg
-		width: 60px
-		height: 60px
-		vertical-align: middle
-		position: absolute
-		top: 12px
-	.question__title__text
-		padding-left: 70px
-		display: block
