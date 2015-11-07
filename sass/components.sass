@@ -1,9 +1,8 @@
 //typography
 =h1
 	font-weight: bold
-	+font-size($xLarge)
+	+font-size($xLarge, $baseline*1.5)
 	padding-top: base()
-	text-align: center
 
 
 =h2
@@ -17,6 +16,7 @@
 	padding-top: base()
 	text-align: center
 	font-weight: bold
+	padding-bottom: base(.5)
 
 =text
 	p
@@ -29,7 +29,6 @@
 		margin-top: base(0.5)
 
 =list
-	padding-top: base(.5)
 	padding-left: 27px
 	li
 		+font-size($small)
@@ -57,8 +56,8 @@
 		font-weight: bold
 
 =author
+	font-weight: bold
 	text-align: right
-	margin-top: base()
 	+font-size(18)
 	+formal
 

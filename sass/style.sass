@@ -8,7 +8,7 @@
 
 @import "components"
 
-//@import "baseline"
+@import "baseline"
 
 //Grid and layout
 .question__wrapper, .answer__wrapper
@@ -28,9 +28,9 @@
 	+h1
 .question__comments__header, .answer__comments__header
 	+h2
-.alts__info__header
+.alts__question__header
 	+h2alt
-.question__text, .answer__text, .alts__info__text
+.question__text, .answer__text
 	+text
 .question__comment__text, .answer__comment__text
 	+smallText
@@ -46,6 +46,7 @@
 //Custom
 .question__comments, .answer__comments
 	margin-left: base(1.5)
+	margin-top: base()
 .question__author, .answer__author, .question__comment__author, .answer__comment__author
 	+author
 .cta
@@ -114,3 +115,8 @@
 		width: 60px
 		height: 60px
 		vertical-align: middle
+		position: absolute
+		top: 12px
+	.question__title__text
+		padding-left: 70px
+		display: block

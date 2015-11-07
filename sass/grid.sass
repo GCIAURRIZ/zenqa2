@@ -3,8 +3,6 @@
 	padding-top: base()
 	padding-right: $sidebar+px
 	overflow: auto
-	&:first-of-type
-		padding-top: base(2)
 	>*
 		float: right
 		padding: 0 8% base(2)
@@ -28,16 +26,20 @@
 		content: initial
 	>*
 		position: relative
-		padding-bottom: base()
+		padding-bottom: base(1.5)
 		+border-top(white)
+		&::before
+			padding-top: base(.5)
 
 =comment
 	+border-top($black)
-	margin-top: base(1)
+	margin-top: base(1.5)
 	&:first-of-type
 		margin-top: 0
 		&::before
 			content: initial
+	&::before
+		padding-top: base(.5)
 
 =footer
 	padding: 0 8%

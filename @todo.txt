@@ -1,15 +1,17 @@
+Dubbelpilarnas indentering
 
 Typografi:
-Fixa rubbarna, med frågetecken och sånt, header ska ha en till base i bottom-marginal eller nått.
+Fixa rubbarna, indenta.
 Letter-spacing
-signaturerna.
+word-spacing
 
-You can have one site per GitHub repository. Repositories other than "username.github.io" will be published at http://username.github.io/REPONAME. Those repositories will publish whatever you push to the "gh-pages" branch.
+Aligna zenlogo med baseline på menyn (relative offset när rubriken ligger rätt igen.)
+
+fixa icon på ställ en fråga-knappen mfl
 
 
 rensa upp svg:n
 
-fixa iconer, meny radavstånd.
 
 sätta max-bredd
 
@@ -19,7 +21,6 @@ flytta js-modules till varje enskild fil?
 cp-sticky i högermenyn
 
 Fixa andar vyer
-
 :focus
 
 Mobile
