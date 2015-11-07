@@ -190,29 +190,6 @@ textarea {
   src: url(image-path("fonts/relative-faux-webfont.eot")) format("embedded-opentype"), url(image-path("fonts/relative-faux-webfont.woff2")) format("woff2"), url(image-path("fonts/relative-faux-webfont.woff")) format("woff"), url(image-path("fonts/relative-faux-webfont.ttf")) format("truetype"), url(image-path("fonts/relative-faux-webfont.svg")) format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 1, ../sass/baseline.sass */
-body {
-  position: relative; }
-
-/* line 4, ../sass/baseline.sass */
-body:after {
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 9999;
-  content: "";
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../image.png) repeat top left; }
-
-/* line 18, ../sass/baseline.sass */
-body:active:after {
-  display: none; }
-
 /* line 14, ../sass/style.sass */
 .question__wrapper, .answer__wrapper {
   padding-top: 24px;
