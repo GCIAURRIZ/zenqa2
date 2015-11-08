@@ -1,12 +1,12 @@
 //Horizontal grid
 =content
 	padding-top: base()
-	padding-right: $sidebar+px
+	padding-right: $sidebar
 	overflow: auto
 	>*
 		float: right
 		padding: 0 8% base(2)
-		//max-width: $contentMax+px
+		max-width: $contentMax
 
 =sidebar
 	padding-top: base()
@@ -16,7 +16,7 @@
 	height: 100vh
 	>*
 		padding: 0 10% base(2)
-		width: $sidebar+px
+		width: $sidebar
 	>*:last-child
 		min-height: 100%
 
@@ -43,13 +43,11 @@
 
 =footer
 	padding: 0 8%
-	.footer__logotype
-		flex-grow: 1
 	.footer-navigation
 		padding-top: base(5)
 		padding-bottom: base(3.5)
 		margin: 0 auto
-		max-width: $maxSideWidth+px
+		max-width: $maxSideWidth
 		@include flexbox
 		@include justify-content(flex-end)
 		.footer-navigation__section
@@ -60,6 +58,8 @@
 			display: block
 			&:first-of-type
 				margin-top: base(.5)
+		.footer__logotype
+			flex-grow: 1
 
 =border-top
 	&::before
@@ -70,17 +70,17 @@
 		margin-top: -1px
 
 //Vertical grid
-$baseline: 24
+$baseline: 24px
 
 
 @function base($count: 1, $offset: 0)
 	$val: $baseline*$count + $offset
-	@return $val + px
+	@return $val
 
 //@if $line-height ..
 =font-size($font-size, $line-height: $baseline, $cap-height: 0.7)
 	$baseline-distance: ($line-height - ($cap-height*$font-size)) / 2
-	font-size: $font-size + px
-	line-height: $line-height + px
+	font-size: $font-size
+	line-height: $line-height
 	position: relative
-	top: $baseline-distance + px
+	top: $baseline-distance

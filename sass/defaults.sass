@@ -13,14 +13,11 @@ body
 	-moz-osx-font-smoothing: grayscale
 	text-rendering: optimizeLegibility
 
-a
+a, button
+	color: white
 	text-decoration: none
 	&:hover
-		-moz-transition: all 0.4s ease-out
-		-o-transition: all 0.4s ease-out
-		-webkit-transition: all 0.4s ease-out
-		color: $darkerBlue
-		transition: all 0.4s ease-out
+		+transistion
 
 textarea
 	margin-top: base()

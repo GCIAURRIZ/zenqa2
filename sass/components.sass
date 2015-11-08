@@ -5,8 +5,8 @@
 	margin-top: base()
 	text-align: center
 	svg
-		width: 60px
-		height: 60px
+		width: $iconSize
+		height: $iconSize
 		vertical-align: middle
 	@if $align  == 'left'
 		text-align: left
@@ -15,7 +15,7 @@
 			top: 50%
 			transform: translateY(-50%)
 		span
-			padding-left: 70px
+			padding-left: $iconSize+base(.5)
 			display: block
 
 =h2
@@ -48,6 +48,10 @@
 		+font-size($small)
 		list-style-image: inline-image("arrow.svg")
 		padding-top: base(.5)
+	a
+		border-bottom: 1px solid rgba(256, 256, 256, 0)
+	a:hover
+		border-bottom: 1px solid rgba(256, 256, 256, 1)
 
 =input
 	margin-top: base()
@@ -90,7 +94,7 @@
 =logo
 	display: block
 	margin: 0 auto
-	width: 197px
+	width: $logoW
 	position: relative
 	top: 2px
 	.logotype-icon
@@ -112,13 +116,20 @@
 	text-decoration: none
 	width: $buttonW
 	display: block
-	font-size: $small+px
+	font-size: $small
 	height: $button-height
 	line-height: $button-height
 	+borderRadius
 	text-align: center
 	margin: 0 auto
 	border: 0
+	svg
+		width: $button-height
+		height: $button-height
+		vertical-align: middle
+		position: relative
+		top: -2px
+		margin-left: -$button-height/2
 
 
 =button($type: block)
@@ -137,7 +148,7 @@
 
 	.button__hover
 		+buttonStyle
-		font-size: $xSmall+px
+		font-size: $xSmall
 		transform: rotateX(-90deg) translateZ(-$button-height/2)
 
 	//Pixel-hack

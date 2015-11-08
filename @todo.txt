@@ -1,15 +1,17 @@
-Typografi:
-fixa icon på ställ en fråga-knappen mfl
-hover-cp på knappen.
+sprockets med compass istället
+minify av js med koala
 
-länkar i högerspalten
-
-sätta max-bredd
+Höger-align:a footer.
 
 fixa fastclick
 flytta js-modules till varje enskild fil?
 
 cp-sticky i högermenyn
+vis kommentarsruta/svars-rutan.
+
+
+
+browsertest.
 
 Fixa andar vyer
 Markerad text-färg

@@ -64,9 +64,13 @@
 //Colors
 .question__wrapper
 	background: $green
-.question__response__show, .question__response__button, .answer__response__show, .answer__response__button, .answer__comment__response__button
+.question__response__show, .question__response__button, .answer__response__show, .answer__response__button, .answer__comment__response__button, .alts__question__button, .alts__search__button
 	background: $yellow
 	color: $darkYellow
+	&:hover
+		background: $blue
+		color: white
+
 .question__response__textarea
 	border-color: $darkGreen
 .answer__wrapper
@@ -86,10 +90,6 @@
 		background: $green
 .alts
 	background: $black
-
-.alts__question__button, .alts__search__button
-	color: $darkYellow
-	background: $yellow
 
 .footer
 	background: $blue

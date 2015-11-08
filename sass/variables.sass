@@ -10,25 +10,31 @@ $darkerBlue: #0d294a
 $yellow: #FFBB2F
 $darkYellow: #6C4B00
 
-$sidebar: 458
-$contentMax: 742
+$sidebar: 458px
+$contentMax: 800px
 $button-height: 48px
 $maxSideWidth: $sidebar+$contentMax
 
 
 //fonts
-$xSmall: 14
-$small: 18
-$medium: 24
-$large: 28
-$xLarge: 32
+$xSmall: 14px
+$small: 18px
+$medium: 24px
+$large: 28px
+$xLarge: 32px
 
-
+$iconSize: 60px
 $logoW: 197px
 $inputW: 278px
 $buttonW: 300px
 =borderRadius($val: 4)
 	border-radius: #{$val}px
+
+=transistion
+	-moz-transition: all 0.4s ease-out
+	-o-transition: all 0.4s ease-out
+	-webkit-transition: all 0.4s ease-out
+	transition: all 0.4s ease-out
 
 @font-face
 	font-family: 'gt-haptik'
