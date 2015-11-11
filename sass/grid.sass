@@ -6,22 +6,25 @@
 	>*
 		float: right
 		padding: 0 8% base(2)
-		max-width: $contentMax
 
 =sidebar
-	padding-top: base()
 	position: absolute
-	right: 0
 	top: 0
-	height: 100vh
+	right: 0
+	height: 100%
 	>*
-		padding: 0 10% base(2)
+		padding: 0 base(2) base(2)
 		width: $sidebar
-	>*:last-child
-		min-height: 100%
 
 =alternatives
 	padding-top: base()
+	height: 100vw
+	&.topFix
+		position: fixed
+		top: 0
+	&.bottomFix
+		position: absolute
+		bottom: 0
 	>*:first-child::before
 		content: initial
 	>*
@@ -47,7 +50,6 @@
 		padding-top: base(5)
 		padding-bottom: base(3.5)
 		margin: 0 auto
-		max-width: $maxSideWidth
 		@include flexbox
 		@include justify-content(flex-end)
 		.footer-navigation__section

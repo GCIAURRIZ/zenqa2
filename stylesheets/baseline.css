@@ -1,0 +1,22 @@
+/* line 1, ../sass/baseline.sass */
+body {
+  position: relative; }
+
+/* line 4, ../sass/baseline.sass */
+body:after {
+  position: absolute;
+  width: auto;
+  height: auto;
+  z-index: 9999;
+  content: "";
+  display: block;
+  pointer-events: none;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(../image.png) repeat top left; }
+
+/* line 18, ../sass/baseline.sass */
+body:active:after {
+  display: none; }

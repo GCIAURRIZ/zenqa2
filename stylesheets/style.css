@@ -221,74 +221,77 @@ body:active:after {
   /* line 6, ../sass/grid.sass */
   .question__wrapper > *, .answer__wrapper > * {
     float: right;
-    padding: 0 8% 48px;
-    max-width: 800px; }
+    padding: 0 8% 48px; }
 
 /* line 17, ../sass/style.sass */
 .context {
-  padding-top: 24px;
   position: absolute;
-  right: 0;
   top: 0;
-  height: 100vh; }
-  /* line 17, ../sass/grid.sass */
+  right: 0;
+  height: 100%; }
+  /* line 15, ../sass/grid.sass */
   .context > * {
-    padding: 0 10% 48px;
+    padding: 0 48px 48px;
     width: 458px; }
-  /* line 20, ../sass/grid.sass */
-  .context > *:last-child {
-    min-height: 100%; }
 
 /* line 19, ../sass/style.sass */
 .question__comment, .answer__comment {
   margin-top: 36px; }
-  /* line 65, ../sass/grid.sass */
+  /* line 67, ../sass/grid.sass */
   .question__comment::before, .answer__comment::before {
     content: "";
     border-top-width: 1px;
     border-top-style: solid;
     display: block;
     margin-top: -1px; }
-  /* line 37, ../sass/grid.sass */
+  /* line 40, ../sass/grid.sass */
   .question__comment:first-of-type, .answer__comment:first-of-type {
     margin-top: 0; }
-    /* line 39, ../sass/grid.sass */
+    /* line 42, ../sass/grid.sass */
     .question__comment:first-of-type::before, .answer__comment:first-of-type::before {
       content: initial; }
-  /* line 41, ../sass/grid.sass */
+  /* line 44, ../sass/grid.sass */
   .question__comment::before, .answer__comment::before {
     padding-top: 12px; }
 
 /* line 21, ../sass/style.sass */
 .alts {
-  padding-top: 24px; }
+  padding-top: 24px;
+  height: 100vw; }
+  /* line 22, ../sass/grid.sass */
+  .alts.topFix {
+    position: fixed;
+    top: 0; }
   /* line 25, ../sass/grid.sass */
+  .alts.bottomFix {
+    position: absolute;
+    bottom: 0; }
+  /* line 28, ../sass/grid.sass */
   .alts > *:first-child::before {
     content: initial; }
-  /* line 27, ../sass/grid.sass */
+  /* line 30, ../sass/grid.sass */
   .alts > * {
     position: relative;
     padding-bottom: 36px; }
-    /* line 65, ../sass/grid.sass */
+    /* line 67, ../sass/grid.sass */
     .alts > *::before {
       content: "";
       border-top-width: 1px;
       border-top-style: solid;
       display: block;
       margin-top: -1px; }
-    /* line 31, ../sass/grid.sass */
+    /* line 34, ../sass/grid.sass */
     .alts > *::before {
       padding-top: 12px; }
 
 /* line 23, ../sass/style.sass */
 .footer {
   padding: 0 8%; }
-  /* line 46, ../sass/grid.sass */
+  /* line 49, ../sass/grid.sass */
   .footer .footer-navigation {
     padding-top: 120px;
     padding-bottom: 84px;
     margin: 0 auto;
-    max-width: 1258px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -299,19 +302,19 @@ body:active:after {
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end; }
-    /* line 53, ../sass/grid.sass */
+    /* line 55, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__section {
       margin-right: 84px; }
-    /* line 55, ../sass/grid.sass */
+    /* line 57, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__section:last-child {
       margin-right: 0; }
-    /* line 57, ../sass/grid.sass */
+    /* line 59, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__link {
       display: block; }
-      /* line 59, ../sass/grid.sass */
+      /* line 61, ../sass/grid.sass */
       .footer .footer-navigation .footer-navigation__link:first-of-type {
         margin-top: 12px; }
-    /* line 61, ../sass/grid.sass */
+    /* line 63, ../sass/grid.sass */
     .footer .footer-navigation .footer__logotype {
       flex-grow: 1; }
 

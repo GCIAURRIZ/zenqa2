@@ -1,7 +1,7 @@
-sprockets med compass istället
-minify av js med koala
-
 Höger-align:a footer.
+inline-flex på navigation+lösa padding på nått sätt.
+
+minify av js med koala
 
 fixa fastclick
 flytta js-modules till varje enskild fil?
@@ -10,16 +10,12 @@ cp-sticky i högermenyn
 vis kommentarsruta/svars-rutan.
 
 
-
 browsertest.
 
-Fixa andar vyer
 Markerad text-färg
 
-rensa upp svg:n
 
-
-Mobile, lägg i varje komponent.(dubbla spaltbrädden kanske?)
+Mobile, lägg i varje komponent.(dubbla spaltbrädden som break-poin kanske?)
 @media screen and (max-width: 1130px)
 	.footer
 		padding: 0 50px
@@ -73,3 +69,8 @@ Mobile, lägg i varje komponent.(dubbla spaltbrädden kanske?)
 
 	.footer-navigation__section:nth-of-type(3)
 		margin-bottom: 28px
+
+
+
+Fixa andar vyer
+rensa upp svg:n

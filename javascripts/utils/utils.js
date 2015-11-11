@@ -25,6 +25,28 @@ var Utils = {
     }
   },
 
+  // Takes items and returns those that are currently in the Viewport.
+  inViewport: function(elements, margin) {
+    var inViewport = [];
+
+    if(elements.constructor !== Array){
+      elements = [elements];
+    }
+    margin = margin || 0;
+
+    for (var i = elements.length - 1; i >= 0; i--) {
+      var element = elements[i],
+        bounds = element.getBoundingClientRect(),
+        aboveViewport = bounds.bottom - margin < 0,
+        belowViewport = window.innerHeight-bounds.top + margin < 0;
+
+        if( !aboveViewport && !belowViewport ){
+          inViewport.push(element);
+        }
+    }
+    return inViewport;
+  },
+
   // Event throttler. Used manily on viewport resize and scrolling, so we don't
   // fire too much function calls at each event
 

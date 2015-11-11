@@ -2,6 +2,7 @@
 // @koala-prepend "utils/utils.js"
 // @koala-prepend "modules/universal_analytics.js"
 // @koala-prepend "modules/zenconomy_analytics.js"
+// @koala-prepend "modules/alts.js"
 
 // Init global app scope
 var app = {},
@@ -17,6 +18,7 @@ Utils.isIE();
 
 modules = [
  {'name': 'Human',             'selector': 'html',                 'class': Human},
+ {'name': 'Alts',               'selector': '.alts',                'class': Alts}
 //  {'name': 'State',             'selector': '.dynamic__state',       'class': State},
 //  {'name': 'Introduction',      'selector': '.introduction',        'class': Introduction},
 //  {'name': 'Demo',              'selector': '.demo',                'class': Demo},
@@ -52,6 +54,15 @@ app.window.on('resize',
 window.onload = function() {
   app.Human.check();
 };
+
+
+// lock alts if applicable
+app.window.on('scroll',
+  Utils.throttle(function() {
+    if(app.Tracking) { app.Tracking.section(); }
+    if(app.Alts) { app.Alts.lockCheck(); }
+  }, 100)
+);
 
 // Load fastclick.js. Triggers links faster on touch devices
 // https://github.com/ftlabs/fastclick
