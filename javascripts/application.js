@@ -1,4 +1,5 @@
 // @koala-prepend "vendor/_sprint.js"
+// @koala-prepend "vendor/fastclick"
 // @koala-prepend "utils/utils.js"
 // @koala-prepend "modules/universal_analytics.js"
 // @koala-prepend "modules/zenconomy_analytics.js"
@@ -60,15 +61,15 @@ window.onload = function() {
 app.window.on('scroll',
   Utils.throttle(function() {
     if(app.Tracking) { app.Tracking.section(); }
-    if(app.Alts) { app.Alts.lockCheck(); }
-  }, 100)
+    if(app.Alts) { app.Alts.onScroll(); }
+  }, 10)
 );
 
-// Load fastclick.js. Triggers links faster on touch devices
+//Load fastclick.js. Triggers links faster on touch devices
 // https://github.com/ftlabs/fastclick
-//if ('addEventListener' in document) {
-//  document.addEventListener('DOMContentLoaded', function() {
-//    FastClick.attach(document.body);
-//  }, false);
-//}
+if ('addEventListener' in document) {
+  document.addEventListener('DOMContentLoaded', function() {
+    FastClick.attach(document.body);
+  }, false);
+}
 

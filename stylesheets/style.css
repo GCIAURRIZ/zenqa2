@@ -1,3 +1,7 @@
+/* line 22, ../sass/grid.sass */
+.content__wrapper {
+  position: relative; }
+
 @font-face {
   font-family: "gt-haptik";
   src: url("../fonts/gt-haptik-light-webfont.eot");
@@ -190,29 +194,6 @@ textarea {
   src: url(image-path("fonts/relative-faux-webfont.eot")) format("embedded-opentype"), url(image-path("fonts/relative-faux-webfont.woff2")) format("woff2"), url(image-path("fonts/relative-faux-webfont.woff")) format("woff"), url(image-path("fonts/relative-faux-webfont.ttf")) format("truetype"), url(image-path("fonts/relative-faux-webfont.svg")) format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 1, ../sass/baseline.sass */
-body {
-  position: relative; }
-
-/* line 4, ../sass/baseline.sass */
-body:after {
-  position: absolute;
-  width: auto;
-  height: auto;
-  z-index: 9999;
-  content: "";
-  display: block;
-  pointer-events: none;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: url(../image.png) repeat top left; }
-
-/* line 18, ../sass/baseline.sass */
-body:active:after {
-  display: none; }
-
 /* line 14, ../sass/style.sass */
 .question__wrapper, .answer__wrapper {
   padding-top: 24px;
@@ -233,61 +214,67 @@ body:active:after {
   .context > * {
     padding: 0 48px 48px;
     width: 458px; }
+  /* line 18, ../sass/grid.sass */
+  .context > *:last-child {
+    padding-bottom: 0;
+    height: 100vh; }
 
 /* line 19, ../sass/style.sass */
 .question__comment, .answer__comment {
   margin-top: 36px; }
-  /* line 67, ../sass/grid.sass */
+  /* line 74, ../sass/grid.sass */
   .question__comment::before, .answer__comment::before {
     content: "";
     border-top-width: 1px;
     border-top-style: solid;
     display: block;
     margin-top: -1px; }
-  /* line 40, ../sass/grid.sass */
+  /* line 47, ../sass/grid.sass */
   .question__comment:first-of-type, .answer__comment:first-of-type {
     margin-top: 0; }
-    /* line 42, ../sass/grid.sass */
+    /* line 49, ../sass/grid.sass */
     .question__comment:first-of-type::before, .answer__comment:first-of-type::before {
       content: initial; }
-  /* line 44, ../sass/grid.sass */
+  /* line 51, ../sass/grid.sass */
   .question__comment::before, .answer__comment::before {
     padding-top: 12px; }
 
 /* line 21, ../sass/style.sass */
 .alts {
-  padding-top: 24px;
-  height: 100vw; }
-  /* line 22, ../sass/grid.sass */
+  padding-top: 24px; }
+  /* line 27, ../sass/grid.sass */
   .alts.topFix {
     position: fixed;
     top: 0; }
-  /* line 25, ../sass/grid.sass */
+  /* line 30, ../sass/grid.sass */
   .alts.bottomFix {
     position: absolute;
     bottom: 0; }
-  /* line 28, ../sass/grid.sass */
+  /* line 33, ../sass/grid.sass */
   .alts > *:first-child::before {
     content: initial; }
-  /* line 30, ../sass/grid.sass */
+  /* line 35, ../sass/grid.sass */
   .alts > * {
     position: relative;
     padding-bottom: 36px; }
-    /* line 67, ../sass/grid.sass */
+    /* line 74, ../sass/grid.sass */
     .alts > *::before {
       content: "";
       border-top-width: 1px;
       border-top-style: solid;
       display: block;
       margin-top: -1px; }
-    /* line 34, ../sass/grid.sass */
+    /* line 39, ../sass/grid.sass */
     .alts > *::before {
       padding-top: 12px; }
+  /* line 41, ../sass/grid.sass */
+  .alts > *:last-child {
+    padding-bottom: 0; }
 
 /* line 23, ../sass/style.sass */
 .footer {
   padding: 0 8%; }
-  /* line 49, ../sass/grid.sass */
+  /* line 56, ../sass/grid.sass */
   .footer .footer-navigation {
     padding-top: 120px;
     padding-bottom: 84px;
@@ -302,19 +289,19 @@ body:active:after {
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end; }
-    /* line 55, ../sass/grid.sass */
+    /* line 62, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__section {
       margin-right: 84px; }
-    /* line 57, ../sass/grid.sass */
+    /* line 64, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__section:last-child {
       margin-right: 0; }
-    /* line 59, ../sass/grid.sass */
+    /* line 66, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__link {
       display: block; }
-      /* line 61, ../sass/grid.sass */
+      /* line 68, ../sass/grid.sass */
       .footer .footer-navigation .footer-navigation__link:first-of-type {
         margin-top: 12px; }
-    /* line 63, ../sass/grid.sass */
+    /* line 70, ../sass/grid.sass */
     .footer .footer-navigation .footer__logotype {
       flex-grow: 1; }
 
@@ -438,7 +425,7 @@ body:active:after {
   margin: 0 auto;
   border: 0;
   margin-top: 24px; }
-  /* line 126, ../sass/components.sass */
+  /* line 123, ../sass/components.sass */
   .alts__question__button svg, .question__response__show svg, .answer__response__show svg {
     width: 48px;
     height: 48px;
@@ -464,7 +451,7 @@ body:active:after {
   display: inline-block;
   width: auto;
   padding: 0 24px; }
-  /* line 126, ../sass/components.sass */
+  /* line 123, ../sass/components.sass */
   .alts__search__button svg, .question__response__button svg, .answer__response__button svg, .answer__comment__response__button svg {
     width: 48px;
     height: 48px;
@@ -486,16 +473,16 @@ body:active:after {
   line-height: 24px;
   position: relative;
   top: 5.7px; }
-  /* line 71, ../sass/components.sass */
+  /* line 68, ../sass/components.sass */
   .question__author .formal, .answer__author .formal, .question__comment__author .formal, .answer__comment__author .formal {
     display: block;
     color: #378DF1;
     font-weight: bold; }
 
-/* line 83, ../sass/components.sass */
+/* line 80, ../sass/components.sass */
 .cta .cta__logo {
   padding-top: 24px; }
-/* line 85, ../sass/components.sass */
+/* line 82, ../sass/components.sass */
 .cta .cta__header {
   padding-top: 12px;
   font-size: 28px;
@@ -504,10 +491,10 @@ body:active:after {
   top: 8.2px;
   text-align: center;
   font-weight: bold; }
-/* line 90, ../sass/components.sass */
+/* line 87, ../sass/components.sass */
 .cta .cta__button {
   padding-top: 36px; }
-  /* line 145, ../sass/components.sass */
+  /* line 142, ../sass/components.sass */
   .cta .cta__button .button__link {
     text-decoration: none;
     width: 300px;
@@ -520,7 +507,7 @@ body:active:after {
     margin: 0 auto;
     border: 0;
     transform: translate3d(0, 0, 0); }
-    /* line 126, ../sass/components.sass */
+    /* line 123, ../sass/components.sass */
     .cta .cta__button .button__link svg {
       width: 48px;
       height: 48px;
@@ -528,7 +515,7 @@ body:active:after {
       position: relative;
       top: -2px;
       margin-left: -24px; }
-  /* line 149, ../sass/components.sass */
+  /* line 146, ../sass/components.sass */
   .cta .cta__button .button__hover {
     text-decoration: none;
     width: 300px;
@@ -542,7 +529,7 @@ body:active:after {
     border: 0;
     font-size: 14px;
     transform: rotateX(-90deg) translateZ(-24px); }
-    /* line 126, ../sass/components.sass */
+    /* line 123, ../sass/components.sass */
     .cta .cta__button .button__hover svg {
       width: 48px;
       height: 48px;
@@ -550,20 +537,20 @@ body:active:after {
       position: relative;
       top: -2px;
       margin-left: -24px; }
-  /* line 155, ../sass/components.sass */
+  /* line 152, ../sass/components.sass */
   .cta .cta__button .button__default {
     border-radius: 4px; }
-  /* line 159, ../sass/components.sass */
+  /* line 156, ../sass/components.sass */
   body.ie .cta .cta__button .button__hover {
     display: none; }
-  /* line 163, ../sass/components.sass */
+  /* line 160, ../sass/components.sass */
   body:not(.ie) .cta .cta__button .hoverable {
     transition: all 150ms ease;
     transform-style: preserve-3d; }
-    /* line 167, ../sass/components.sass */
+    /* line 164, ../sass/components.sass */
     body:not(.ie) .cta .cta__button .hoverable .button__default {
       transform: translateZ(24px); }
-    /* line 170, ../sass/components.sass */
+    /* line 167, ../sass/components.sass */
     body:not(.ie) .cta .cta__button .hoverable:hover {
       transform: rotateX(90deg); }
 
@@ -574,7 +561,7 @@ body:active:after {
   width: 197px;
   position: relative;
   top: 2px; }
-  /* line 100, ../sass/components.sass */
+  /* line 97, ../sass/components.sass */
   .footer__logotype .logotype-icon, .cta__logo .logotype-icon {
     width: 197px;
     display: block;
@@ -591,44 +578,41 @@ body:active:after {
   text-align: center;
   transform: translateX(-50%); }
 
-/* line 61, ../sass/style.sass */
-.footer {
-  font-size: 18px;
-  line-height: 24px;
-  position: relative;
-  top: 5.7px; }
-
-/* line 65, ../sass/style.sass */
+/* line 63, ../sass/style.sass */
 .question__wrapper {
   background: #009B58; }
 
-/* line 67, ../sass/style.sass */
+/* line 65, ../sass/style.sass */
 .question__response__show, .question__response__button, .answer__response__show, .answer__response__button, .answer__comment__response__button, .alts__question__button, .alts__search__button {
   background: #FFBB2F;
   color: #6C4B00; }
-  /* line 70, ../sass/style.sass */
+  /* line 68, ../sass/style.sass */
   .question__response__show:hover, .question__response__button:hover, .answer__response__show:hover, .answer__response__button:hover, .answer__comment__response__button:hover, .alts__question__button:hover, .alts__search__button:hover {
     background: #378DF1;
     color: white; }
 
-/* line 74, ../sass/style.sass */
+/* line 72, ../sass/style.sass */
 .question__response__textarea {
   border-color: #06452A; }
 
-/* line 76, ../sass/style.sass */
+/* line 74, ../sass/style.sass */
 .answer__wrapper {
   color: #4A4A4A; }
 
-/* line 78, ../sass/style.sass */
+/* line 76, ../sass/style.sass */
 .answer__header {
   color: #009B58; }
 
-/* line 80, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 .answer__comments__header {
   color: #FFBB2F; }
 
-/* line 82, ../sass/style.sass */
+/* line 80, ../sass/style.sass */
 .context {
+  background: #4A4A4A; }
+
+/* line 82, ../sass/style.sass */
+.cta {
   background: #378DF1; }
 
 /* line 85, ../sass/style.sass */

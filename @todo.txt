@@ -1,13 +1,8 @@
-Höger-align:a footer.
-inline-flex på navigation+lösa padding på nått sätt.
+Högermeny-lista, maxantal.
 
-minify av js med koala
+classi grid
 
-fixa fastclick
-flytta js-modules till varje enskild fil?
-
-cp-sticky i högermenyn
-vis kommentarsruta/svars-rutan.
+visa kommentarsruta/svars-rutan.
 
 
 browsertest.

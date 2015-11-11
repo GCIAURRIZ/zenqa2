@@ -26,7 +26,7 @@ var Utils = {
   },
 
   // Takes items and returns those that are currently in the Viewport.
-  inViewport: function(elements, margin) {
+  inViewport: function(elements, margin, fullyInside) {
     var inViewport = [];
 
     if(elements.constructor !== Array){
@@ -39,6 +39,11 @@ var Utils = {
         bounds = element.getBoundingClientRect(),
         aboveViewport = bounds.bottom - margin < 0,
         belowViewport = window.innerHeight-bounds.top + margin < 0;
+
+        if(fullyInside){
+          aboveViewport = bounds.top - margin < 0,
+          belowViewport = window.innerHeight-bounds.bottom + margin < 0;
+        }
 
         if( !aboveViewport && !belowViewport ){
           inViewport.push(element);

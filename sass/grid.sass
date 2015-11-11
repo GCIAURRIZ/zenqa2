@@ -15,10 +15,15 @@
 	>*
 		padding: 0 base(2) base(2)
 		width: $sidebar
+	>*:last-child
+		padding-bottom: 0
+		height: 100vh
+
+.content__wrapper
+	position: relative
 
 =alternatives
 	padding-top: base()
-	height: 100vw
 	&.topFix
 		position: fixed
 		top: 0
@@ -33,6 +38,8 @@
 		+border-top
 		&::before
 			padding-top: base(.5)
+	>*:last-child
+		padding-bottom: 0
 
 =comment
 	+border-top
