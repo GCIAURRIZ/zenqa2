@@ -222,7 +222,7 @@ textarea {
 /* line 19, ../sass/style.sass */
 .question__comment, .answer__comment {
   margin-top: 36px; }
-  /* line 74, ../sass/grid.sass */
+  /* line 75, ../sass/grid.sass */
   .question__comment::before, .answer__comment::before {
     content: "";
     border-top-width: 1px;
@@ -257,7 +257,7 @@ textarea {
   .alts > * {
     position: relative;
     padding-bottom: 36px; }
-    /* line 74, ../sass/grid.sass */
+    /* line 75, ../sass/grid.sass */
     .alts > *::before {
       content: "";
       border-top-width: 1px;
@@ -291,17 +291,21 @@ textarea {
     justify-content: flex-end; }
     /* line 62, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__section {
-      margin-right: 84px; }
-    /* line 64, ../sass/grid.sass */
+      margin-right: 84px;
+      font-size: 18px;
+      line-height: 24px;
+      position: relative;
+      top: 5.7px; }
+    /* line 65, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__section:last-child {
       margin-right: 0; }
-    /* line 66, ../sass/grid.sass */
+    /* line 67, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigation__link {
       display: block; }
-      /* line 68, ../sass/grid.sass */
+      /* line 69, ../sass/grid.sass */
       .footer .footer-navigation .footer-navigation__link:first-of-type {
         margin-top: 12px; }
-    /* line 70, ../sass/grid.sass */
+    /* line 71, ../sass/grid.sass */
     .footer .footer-navigation .footer__logotype {
       flex-grow: 1; }
 

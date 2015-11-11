@@ -1,9 +1,12 @@
-Högermeny-lista, maxantal.
+höll på och flytta ut visibleFooter till en metod så att jag kan köra den för dölja-items-grejjen.
 
-classi grid
+class i grid
+
+döpa om classerna
 
 visa kommentarsruta/svars-rutan.
 
+MOAR ikoner.
 
 browsertest.
 
