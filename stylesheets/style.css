@@ -197,7 +197,11 @@ textarea {
   src: url(image-path("fonts/relative-faux-webfont.eot")) format("embedded-opentype"), url(image-path("fonts/relative-faux-webfont.woff2")) format("woff2"), url(image-path("fonts/relative-faux-webfont.woff")) format("woff"), url(image-path("fonts/relative-faux-webfont.ttf")) format("truetype"), url(image-path("fonts/relative-faux-webfont.svg")) format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 14, ../sass/style.sass */
+/* line 12, ../sass/style.sass */
+::selection {
+  background: #E7F2FF; }
+
+/* line 16, ../sass/style.sass */
 .questionWrapper, .answerWrapper {
   padding-top: 24px;
   padding-right: 458px;
@@ -207,7 +211,7 @@ textarea {
     float: right;
     padding: 0 8% 48px; }
 
-/* line 17, ../sass/style.sass */
+/* line 19, ../sass/style.sass */
 .context {
   position: absolute;
   top: 0;
@@ -222,7 +226,7 @@ textarea {
     padding-bottom: 0;
     height: 100vh; }
 
-/* line 19, ../sass/style.sass */
+/* line 21, ../sass/style.sass */
 .questionComment, .answerComment {
   margin-top: 36px; }
   /* line 71, ../sass/grid.sass */
@@ -271,7 +275,7 @@ textarea {
 .alts > *:last-child {
   padding-bottom: 0; }
 
-/* line 23, ../sass/style.sass */
+/* line 25, ../sass/style.sass */
 .footer {
   padding: 0 8%; }
   /* line 52, ../sass/grid.sass */
@@ -309,7 +313,7 @@ textarea {
     .footer .footer-navigation .footerLogotype {
       flex-grow: 1; }
 
-/* line 27, ../sass/style.sass */
+/* line 29, ../sass/style.sass */
 .questionTitle {
   font-weight: bold;
   font-size: 32px;
@@ -334,7 +338,7 @@ textarea {
     padding-left: 72px;
     display: block; }
 
-/* line 29, ../sass/style.sass */
+/* line 31, ../sass/style.sass */
 .answerHeader {
   font-weight: bold;
   font-size: 32px;
@@ -349,7 +353,7 @@ textarea {
     height: 60px;
     vertical-align: middle; }
 
-/* line 31, ../sass/style.sass */
+/* line 33, ../sass/style.sass */
 .questionCommentsHeader, .answerCommentsHeader {
   font-size: 24px;
   line-height: 24px;
@@ -359,7 +363,7 @@ textarea {
   text-align: left;
   font-weight: bold; }
 
-/* line 33, ../sass/style.sass */
+/* line 35, ../sass/style.sass */
 .altsQuestionHeader {
   font-size: 28px;
   line-height: 24px;
@@ -387,7 +391,7 @@ textarea {
   top: 7.1px;
   margin-top: 12px; }
 
-/* line 39, ../sass/style.sass */
+/* line 41, ../sass/style.sass */
 .altsOtherQuestions {
   padding-left: 22px; }
   /* line 47, ../sass/components.sass */
@@ -405,7 +409,7 @@ textarea {
   .altsOtherQuestions a:hover {
     border-bottom: 1px solid white; }
 
-/* line 41, ../sass/style.sass */
+/* line 43, ../sass/style.sass */
 .altsSearchInput {
   margin-top: 24px;
   font-size: 24px;
@@ -416,7 +420,7 @@ textarea {
   border-radius: 4px;
   width: 278px; }
 
-/* line 43, ../sass/style.sass */
+/* line 45, ../sass/style.sass */
 .altsSearchButton, .answerCommentResponseButton, .questionResponseButton, .answerResponseButton {
   text-decoration: none;
   width: 300px;
@@ -442,7 +446,7 @@ textarea {
     top: -2px;
     margin-left: -24px; }
 
-/* line 45, ../sass/style.sass */
+/* line 47, ../sass/style.sass */
 .altsQuestionButton, .answerResponseShow {
   text-decoration: none;
   width: 300px;
@@ -499,12 +503,12 @@ textarea {
   height: 0;
   border: 0; }
 
-/* line 52, ../sass/style.sass */
+/* line 54, ../sass/style.sass */
 .questionComments, .answerComments {
   margin-left: 36px;
   margin-top: 24px; }
 
-/* line 55, ../sass/style.sass */
+/* line 57, ../sass/style.sass */
 .questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor {
   font-weight: bold;
   text-align: right;
@@ -594,7 +598,7 @@ textarea {
   body:not(.ie) .cta .ctaButton:hover .hoverable {
     transform: rotateX(90deg); }
 
-/* line 59, ../sass/style.sass */
+/* line 61, ../sass/style.sass */
 .footerLogotype, .ctaLogo {
   display: block;
   margin: 0 auto;
@@ -607,7 +611,7 @@ textarea {
     display: block;
     height: 48px; }
 
-/* line 62, ../sass/style.sass */
+/* line 64, ../sass/style.sass */
 .altsSearchLabel, .altsOtherLabel {
   background: #4A4A4A;
   position: absolute;
@@ -618,79 +622,79 @@ textarea {
   text-align: center;
   transform: translateX(-50%); }
 
-/* line 66, ../sass/style.sass */
+/* line 68, ../sass/style.sass */
 .questionWrapper {
   background: #009B58; }
 
-/* line 68, ../sass/style.sass */
+/* line 70, ../sass/style.sass */
 .questionResponseButton, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
   background: #FFBB2F;
   color: #6C4B00; }
-  /* line 71, ../sass/style.sass */
+  /* line 73, ../sass/style.sass */
   .questionResponseButton:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
     background: #db9a26; }
 
-/* line 74, ../sass/style.sass */
+/* line 76, ../sass/style.sass */
 .questionResponseTextarea {
   border-color: #06452A; }
 
-/* line 76, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 .answerWrapper {
   color: #4A4A4A; }
 
-/* line 78, ../sass/style.sass */
+/* line 80, ../sass/style.sass */
 .answerHeader {
   color: #009B58; }
 
-/* line 80, ../sass/style.sass */
+/* line 82, ../sass/style.sass */
 .answerCommentsHeader {
   color: #FFBB2F; }
 
-/* line 82, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 .context {
   background: #4A4A4A; }
 
-/* line 84, ../sass/style.sass */
+/* line 86, ../sass/style.sass */
 .cta {
   background: #378DF1; }
 
-/* line 87, ../sass/style.sass */
+/* line 89, ../sass/style.sass */
 .ctaButton .buttonDefault {
   color: #6C4B00;
   background: #FFBB2F; }
-/* line 90, ../sass/style.sass */
+/* line 92, ../sass/style.sass */
 .ctaButton .buttonHover {
   color: white;
   background: #009B58; }
 
-/* line 93, ../sass/style.sass */
+/* line 95, ../sass/style.sass */
 .alts {
   background: #4A4A4A; }
 
-/* line 96, ../sass/style.sass */
+/* line 98, ../sass/style.sass */
 .footer {
   background: #378DF1; }
 
-/* line 99, ../sass/style.sass */
+/* line 101, ../sass/style.sass */
 .footer-navigationTitle {
   color: black; }
 
-/* line 102, ../sass/style.sass */
+/* line 104, ../sass/style.sass */
 .footer-navigationLink {
   color: white; }
-  /* line 104, ../sass/style.sass */
+  /* line 106, ../sass/style.sass */
   .footer-navigationLink:hover {
     color: #0d294a; }
 
-/* line 108, ../sass/style.sass */
+/* line 110, ../sass/style.sass */
 .contentWrapper {
   position: relative; }
 
-/* line 111, ../sass/style.sass */
+/* line 113, ../sass/style.sass */
 .altsSearchLabel {
   font-style: italic; }
 
-/* line 113, ../sass/style.sass */
+/* line 115, ../sass/style.sass */
 .questionCommentAuthor, .answerCommentAuthor {
   font-size: 14;
   line-height: 24px;
@@ -698,6 +702,6 @@ textarea {
   top: 7.1px;
   margin-top: 0; }
 
-/* line 117, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 .answerWrapper {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTYwcHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDU2MCAxMC4wOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTYwIDEwLjA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMDlCNTgiIGQ9Ik0wLDBoNTYwYzAsMS4zNDYsMC0wLjY3MywwLDAuNTA0bC0yMC4wMTIsOS41ODZsLTIwLjAxMy05LjU4NmwtMjAuMDEzLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4Ng0KCQlsLTIwLjAxMi05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZMMzc5Ljg5LDEwLjA5bC0yMC4wMTMtOS41ODZsLTE5Ljg0NCw5LjU4NkwzMjAuMDIsMC41MDRsLTIwLjAxMiw5LjU4NkwyODAsMC41MDQNCgkJbC0yMC4wMTIsOS41ODZsLTIwLjAxNC05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4NmwtMjAuMDEyLTkuNTg2bC0yMC4wMTIsOS41ODZsLTIwLjAxMi05LjU4NmwtMTkuODQ0LDkuNTg2DQoJCUw4MC4wNDUsMC41MDRMNjAuMDMzLDEwLjA5TDQwLjAyMSwwLjUwNEwyMC4wMDgsMTAuMDlMMCwwLjUwNEMwLDAsMCwwLjE2OCwwLDB6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==') white repeat-x; }

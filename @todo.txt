@@ -1,6 +1,3 @@
-browsertest.
-- Evergreen.
-Markerad text-färg
 
 
 Mobile, lägg i varje komponent.(dubbla spaltbrädden som break-poin kanske?)
