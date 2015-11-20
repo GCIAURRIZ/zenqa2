@@ -1,6 +1,3 @@
-Döpa alt
-
-MOAR ikoner.
 browsertest.
 - Evergreen.
 Markerad text-färg
