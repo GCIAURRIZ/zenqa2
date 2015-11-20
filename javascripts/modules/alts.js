@@ -24,8 +24,8 @@ Alts.prototype.onScroll = function(){
 
 //sets right column to fixed.
 Alts.prototype.lock = function(){
-	this.el.toggleClass('topFix', this.adHidden() && this.footerHidden() );
-	this.el.toggleClass('bottomFix', !this.footerHidden() );
+	Utils.toggleClass(this.el,'topFix', this.adHidden() && this.footerHidden())
+	Utils.toggleClass(this.el,'bottomFix', !this.footerHidden())
 };
 
 //hides overflowing items

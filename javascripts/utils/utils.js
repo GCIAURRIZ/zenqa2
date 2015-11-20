@@ -90,6 +90,14 @@ var Utils = {
     };
   },
 
+  toggleClass: function(element, className, condition){
+    if(condition){
+      element.addClass(className);
+    }else{
+      element.removeClass(className);
+    }
+  },
+
  isIE: function() {
     var ua = window.navigator.userAgent,
         msie = ua.indexOf("MSIE ");
