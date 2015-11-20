@@ -88,9 +88,10 @@ button::-moz-focus-inner {
 textarea {
   resize: none;
   font-family: inherit;
-  font-size: inherit; }
+  font-size: inherit;
+  overflow: auto; }
 
-/* line 84, ../sass/reset.sass */
+/* line 85, ../sass/reset.sass */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -100,7 +101,7 @@ textarea {
   padding: 0;
   position: absolute;
   width: 1px; }
-  /* line 96, ../sass/reset.sass */
+  /* line 97, ../sass/reset.sass */
   .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
