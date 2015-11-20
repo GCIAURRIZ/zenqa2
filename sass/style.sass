@@ -11,12 +11,12 @@
 //@import "baseline"
 
 //Grid and layout
-.question__wrapper, .answer__wrapper
+.questionWrapper, .answerWrapper
 	+content
 
 .context
 	+sidebar
-.question__comment, .answer__comment
+.questionComment, .answerComment
 	+comment
 .alts
 	+alternatives
@@ -24,68 +24,70 @@
 	+footer
 
 //standard components
-.question__title
+.questionTitle
 	+h1('left')
-.answer__header
+.answerHeader
 	+h1
-.question__comments__header, .answer__comments__header
+.questionCommentsHeader, .answerCommentsHeader
 	+h2
-.alts__question__header
+.altsQuestionHeader
 	+h2alt
-.question__text, .answer__text
+.questionText, .answerText
 	+text
-.question__comment__text, .answer__comment__text
+.questionCommentText, .answerCommentText
 	+smallText
-.alts__other__questions
+.altsOtherQuestions
 	+list
-.alts__search__input
+.altsSearchInput
 	+input
-.alts__question__button, .question__response__show, .answer__response__show
-	+button
-.alts__search__button, .question__response__button, .answer__response__button, .answer__comment__response__button
+.altsSearchButton,  .answerCommentResponseButton, .questionResponseButton, .answerResponseButton,
 	+button('inline')
+.altsQuestionButton, .answerResponseShow
+	+button
+.expandable
+	+expandable
+
 
 //Custom
-.question__comments, .answer__comments
+.questionComments, .answerComments
 	margin-left: base(1.5)
 	margin-top: base()
-.question__author, .answer__author, .question__comment__author, .answer__comment__author
+.questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor
 	+author
 .cta
 	+ad
-.footer__logotype, .cta__logo
+.footerLogotype, .ctaLogo
 	+logo
 
-.alts__search__label, .alts__other__label
+.altsSearchLabel, .altsOtherLabel
 	+altLabel
 
 //Colors
-.question__wrapper
+.questionWrapper
 	background: $green
-.question__response__show, .question__response__button, .answer__response__show, .answer__response__button, .answer__comment__response__button, .alts__question__button, .alts__search__button
+.questionResponseButton, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton
 	background: $yellow
 	color: $darkYellow
 	&:hover
-		background: $blue
-		color: white
+		background: $semidarkYellow
 
-.question__response__textarea
+.questionResponseTextarea
 	border-color: $darkGreen
-.answer__wrapper
+.answerWrapper
 	color: $black
-.answer__header
+.answerHeader
 	color: $green
-.answer__comments__header
+.answerCommentsHeader
 	color: $yellow
 .context
 	background: $black
 .cta
 	background: $blue
-.cta__button
-	.button__default
+.ctaButton
+	.buttonDefault
 		color: $darkYellow
 		background: $yellow
-	.button__hover
+	.buttonHover
 		color: white
 		background: $green
 .alts
@@ -94,20 +96,23 @@
 .footer
 	background: $blue
 
-.footer-navigation__title
+.footer-navigationTitle
 	color: black
 
-.footer-navigation__link
+.footer-navigationLink
 	color: white
 	&:hover
 		color: $darkerBlue
 
 //Custom styles
-.alts__search__label
+.contentWrapper
+	position: relative
+
+.altsSearchLabel
 	font-style: italic
-.question__comment__author, .answer__comment__author
+.questionCommentAuthor, .answerCommentAuthor
 	+font-size(14)
 	margin-top: 0
 
-.answer__wrapper
+.answerWrapper
 	background: inline-image("edge.svg") white repeat-x

@@ -77,14 +77,14 @@
 	+formal
 
 =ad
-	.cta__logo
+	.ctaLogo
 		padding-top: base()
-	.cta__header
+	.ctaHeader
 		padding-top: base(.5)
 		+font-size($large, $baseline*1.5)
 		text-align: center
 		font-weight: bold
-	.cta__button
+	.ctaButton
 		padding-top: base(1.5)
 		+spinButton
 
@@ -137,32 +137,48 @@
 		display: inline-block
 		width: auto
 		padding: 0 base()
+	@else
+		float: inherit
+		display: inherit
+		padding: inherit
+
+=expandable
+	>*
+		transition: height 0.025s
+	.trigger
+		+button
+	.collapsed
+		height: 0
+		border: 0
+
+
 
 =spinButton
-	.button__link
+	cursor: pointer
+	.buttonLink
 		+buttonStyle
 		transform: translate3d(0, 0, 0)
 
-	.button__hover
+	.buttonHover
 		+buttonStyle
 		font-size: $xSmall
 		transform: rotateX(-90deg) translateZ(-$button-height/2)
 
 	//Pixel-hack
-	.button__default
+	.buttonDefault
 		+borderRadius()
 
 	//Disable spinning in IE.
-	body.ie & .button__hover
+	body.ie & .buttonHover
 		display: none
 
 	//spinny part
-	body:not(.ie) & .hoverable
-		transition: all 150ms ease
-		transform-style: preserve-3d
+	body:not(.ie) &
+		.hoverable
+			transition: all 150ms ease
+			transform-style: preserve-3d
 
-		.button__default
-			transform: translateZ($button-height/2)
-
-		&:hover
-			transform: rotateX(90deg)
+			.buttonDefault
+				transform: translateZ($button-height/2)
+	body:not(.ie) &:hover .hoverable
+		transform: rotateX(90deg)

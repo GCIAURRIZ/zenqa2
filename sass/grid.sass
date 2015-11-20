@@ -13,17 +13,13 @@
 	right: 0
 	height: 100%
 	>*
-		padding: 0 base(2) base(2)
+		padding: base() base(2) base(2)
 		width: $sidebar
 	>*:last-child
 		padding-bottom: 0
 		height: 100vh
 
-.content__wrapper
-	position: relative
-
 =alternatives
-	padding-top: base()
 	&.topFix
 		position: fixed
 		top: 0
@@ -59,16 +55,16 @@
 		margin: 0 auto
 		@include flexbox
 		@include justify-content(flex-end)
-		.footer-navigation__section
+		.footer-navigationSection
 			margin-right: base(3.5)
 			+font-size($small)
-		.footer-navigation__section:last-child
+		.footer-navigationSection:last-child
 			margin-right: 0
-		.footer-navigation__link
+		.footer-navigationLink
 			display: block
 			&:first-of-type
 				margin-top: base(.5)
-		.footer__logotype
+		.footerLogotype
 			flex-grow: 1
 
 =border-top

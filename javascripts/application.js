@@ -4,6 +4,8 @@
 // @koala-prepend "modules/universal_analytics.js"
 // @koala-prepend "modules/zenconomy_analytics.js"
 // @koala-prepend "modules/alts.js"
+// @koala-prepend "modules/expandable.js"
+
 
 // Init global app scope
 var app = {},
@@ -19,14 +21,15 @@ Utils.isIE();
 
 modules = [
  {'name': 'Human',             'selector': 'html',                 'class': Human},
- {'name': 'Alts',               'selector': '.alts',                'class': Alts}
-//  {'name': 'State',             'selector': '.dynamic__state',       'class': State},
+ {'name': 'Alts',              'selector': '.alts',                'class': Alts},
+ {'name': 'Expandable',           'selector': '.expandable',      'class': Expandable}
+//  {'name': 'State',             'selector': '.dynamicState',       'class': State},
 //  {'name': 'Introduction',      'selector': '.introduction',        'class': Introduction},
 //  {'name': 'Demo',              'selector': '.demo',                'class': Demo},
-//  {'name': 'OverviewService',   'selector': '.overview__services',  'class': Overview},
+//  {'name': 'OverviewService',   'selector': '.overviewServices',  'class': Overview},
 //  {'name': 'AboutQuote',        'selector': '.about',               'class': AboutQuote},
-//  {'name': 'NavigationButton',  'selector': '.navigation__button',  'class': NavigationButton},
-//  {'name': 'Pricing',           'selector': '.pricing__services',   'class': Pricing},
+//  {'name': 'NavigationButton',  'selector': '.navigationButton',  'class': NavigationButton},
+//  {'name': 'Pricing',           'selector': '.pricingServices',   'class': Pricing},
 //  {'name': 'QuoteCarousel',     'selector': '.carousel',            'class': QuoteCarousel},
 //  {'name': 'Tracking',          'selector': '.main',                 'class': Tracking}
 ];

@@ -1,19 +1,8 @@
-class i grid'
-
-hover:
-$color-yellow-semidark: rgb(219, 154, 38);
-hover på knappen, css pointer-events: none kanske?
-
-Align med logo
-
-döpa om classerna
-
-visa kommentarsruta/svars-rutan.
+Döpa alt
 
 MOAR ikoner.
-
 browsertest.
-
+- Evergreen.
 Markerad text-färg
 
 

@@ -5,7 +5,6 @@ Alts = function(el) {
 	this.position = this.el.position().top;
 	this.footer = $('footer').dom;
 	this.overflowHidden = false;
-
 };
 
 Alts.prototype.adHidden = function(){
@@ -17,21 +16,21 @@ Alts.prototype.footerHidden = function(){
 };
 
 Alts.prototype.onScroll = function(){
-	this.lockCheck();
-	//hide overflowing items once the right column locks.
+	this.lock();
 	if(!this.overflowHidden && (this.adHidden() && this.footerHidden()) ){
 		this.hideOverflowing();
 	}
 };
 
-Alts.prototype.lockCheck = function(){
+//sets right column to fixed.
+Alts.prototype.lock = function(){
 	this.el.toggleClass('topFix', this.adHidden() && this.footerHidden() );
 	this.el.toggleClass('bottomFix', !this.footerHidden() );
 };
 
-
+//hides overflowing items
 Alts.prototype.hideOverflowing = function() {
-	var listItems = this.el.find('.alts__other__questions li').dom;
+	var listItems = this.el.find('.altsOtherQuestions li').dom;
 
 	this.overflowHidden = true;
 	listItems.forEach(function(item){

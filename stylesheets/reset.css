@@ -84,7 +84,11 @@ button::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* line 79, ../sass/reset.sass */
+/* line 77, ../sass/reset.sass */
+textarea {
+  resize: none; }
+
+/* line 81, ../sass/reset.sass */
 .visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
@@ -94,7 +98,7 @@ button::-moz-focus-inner {
   padding: 0;
   position: absolute;
   width: 1px; }
-  /* line 91, ../sass/reset.sass */
+  /* line 93, ../sass/reset.sass */
   .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
     clip: auto;
     height: auto;
