@@ -135,11 +135,15 @@ textarea {
     width: auto; }
 
 /* line 1, ../sass/defaults.sass */
+::selection {
+  background: #E7F2FF; }
+
+/* line 4, ../sass/defaults.sass */
 html {
   height: 100%;
   color: white; }
 
-/* line 6, ../sass/defaults.sass */
+/* line 9, ../sass/defaults.sass */
 body {
   letter-spacing: 0.04em;
   min-height: 100%;
@@ -150,18 +154,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
 
-/* line 16, ../sass/defaults.sass */
+/* line 19, ../sass/defaults.sass */
 a, button {
   color: white;
-  text-decoration: none; }
-  /* line 19, ../sass/defaults.sass */
+  text-decoration: none;
+  cursor: pointer; }
+  /* line 23, ../sass/defaults.sass */
   a:hover, button:hover {
     -moz-transition: all 0.4s ease-out;
     -o-transition: all 0.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
     transition: all 0.4s ease-out; }
 
-/* line 22, ../sass/defaults.sass */
+/* line 26, ../sass/defaults.sass */
 textarea {
   margin-top: 24px;
   display: block;
@@ -197,21 +202,17 @@ textarea {
   src: url(image-path("fonts/relative-faux-webfont.eot")) format("embedded-opentype"), url(image-path("fonts/relative-faux-webfont.woff2")) format("woff2"), url(image-path("fonts/relative-faux-webfont.woff")) format("woff"), url(image-path("fonts/relative-faux-webfont.ttf")) format("truetype"), url(image-path("fonts/relative-faux-webfont.svg")) format("svg");
   font-weight: normal;
   font-style: normal; }
-/* line 12, ../sass/style.sass */
-::selection {
-  background: #E7F2FF; }
-
-/* line 16, ../sass/style.sass */
-.questionWrapper, .answerWrapper {
+/* line 14, ../sass/style.sass */
+.questionWrapper, .answerWrapper, .listWrapper {
   padding-top: 24px;
   padding-right: 458px;
   overflow: auto; }
   /* line 6, ../sass/grid.sass */
-  .questionWrapper > *, .answerWrapper > * {
+  .questionWrapper > *, .answerWrapper > *, .listWrapper > * {
     float: right;
     padding: 0 8% 48px; }
 
-/* line 19, ../sass/style.sass */
+/* line 17, ../sass/style.sass */
 .context {
   position: absolute;
   top: 0;
@@ -221,12 +222,8 @@ textarea {
   .context > * {
     padding: 24px 48px 48px;
     width: 458px; }
-  /* line 18, ../sass/grid.sass */
-  .context > *:last-child {
-    padding-bottom: 0;
-    height: 100vh; }
 
-/* line 21, ../sass/style.sass */
+/* line 19, ../sass/style.sass */
 .questionComment, .answerComment {
   margin-top: 36px; }
   /* line 71, ../sass/grid.sass */
@@ -246,14 +243,16 @@ textarea {
   .questionComment::before, .answerComment::before {
     padding-top: 12px; }
 
-/* line 23, ../sass/grid.sass */
+/* line 21, ../sass/grid.sass */
 .alts.topFix {
   position: fixed;
   top: 0; }
-/* line 26, ../sass/grid.sass */
+/* line 24, ../sass/grid.sass */
 .alts.bottomFix {
   position: absolute;
-  bottom: 0; }
+  bottom: 0;
+  top: initial;
+  max-height: 100vh; }
 /* line 29, ../sass/grid.sass */
 .alts > *:first-child::before {
   content: none; }
@@ -275,7 +274,7 @@ textarea {
 .alts > *:last-child {
   padding-bottom: 0; }
 
-/* line 25, ../sass/style.sass */
+/* line 23, ../sass/style.sass */
 .footer {
   padding: 0 8%; }
   /* line 52, ../sass/grid.sass */
@@ -313,7 +312,7 @@ textarea {
     .footer .footer-navigation .footerLogotype {
       flex-grow: 1; }
 
-/* line 29, ../sass/style.sass */
+/* line 27, ../sass/style.sass */
 .questionTitle {
   font-weight: bold;
   font-size: 32px;
@@ -338,8 +337,8 @@ textarea {
     padding-left: 72px;
     display: block; }
 
-/* line 31, ../sass/style.sass */
-.answerHeader {
+/* line 29, ../sass/style.sass */
+.answerHeader, .listTitle {
   font-weight: bold;
   font-size: 32px;
   line-height: 36px;
@@ -348,12 +347,12 @@ textarea {
   margin-top: 24px;
   text-align: center; }
   /* line 7, ../sass/components.sass */
-  .answerHeader svg {
+  .answerHeader svg, .listTitle svg {
     width: 60px;
     height: 60px;
     vertical-align: middle; }
 
-/* line 33, ../sass/style.sass */
+/* line 31, ../sass/style.sass */
 .questionCommentsHeader, .answerCommentsHeader {
   font-size: 24px;
   line-height: 24px;
@@ -363,7 +362,7 @@ textarea {
   text-align: left;
   font-weight: bold; }
 
-/* line 35, ../sass/style.sass */
+/* line 33, ../sass/style.sass */
 .altsQuestionHeader {
   font-size: 28px;
   line-height: 24px;
@@ -391,23 +390,51 @@ textarea {
   top: 7.1px;
   margin-top: 12px; }
 
-/* line 41, ../sass/style.sass */
+/* line 39, ../sass/style.sass */
 .altsOtherQuestions {
   padding-left: 22px; }
-  /* line 47, ../sass/components.sass */
+  /* line 65, ../sass/components.sass */
   .altsOtherQuestions li {
+    list-style-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc5JyBoZWlnaHQ9JzknIHZpZXdCb3g9JzAgMCA5IDknPgoJPHRleHQKCQlmb250LWZhbWlseT0iZ3QtaGFwdGlrLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgICAgICB4PScwJwogICAgICAgIHk9JzknCiAgICAgICAgZmlsbD0id2hpdGUiCiAgICA+CiAgICAgICAgCSYjeGJiOwogICAgPC90ZXh0Pgo8L3N2Zz4=');
     font-size: 18px;
     line-height: 24px;
     position: relative;
     top: 5.7px;
-    list-style-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc5JyBoZWlnaHQ9JzknIHZpZXdCb3g9JzAgMCA5IDknPgoJPHRleHQKCQlmb250LWZhbWlseT0iZ3QtaGFwdGlrLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgICAgICB4PScwJwogICAgICAgIHk9JzknCiAgICAgICAgZmlsbD0id2hpdGUiCiAgICA+CiAgICAgICAgCSYjeGJiOwogICAgPC90ZXh0Pgo8L3N2Zz4=');
     padding-top: 12px; }
-  /* line 51, ../sass/components.sass */
+  /* line 69, ../sass/components.sass */
   .altsOtherQuestions a {
     border-bottom: 1px solid rgba(255, 255, 255, 0); }
-  /* line 53, ../sass/components.sass */
+  /* line 71, ../sass/components.sass */
   .altsOtherQuestions a:hover {
     border-bottom: 1px solid white; }
+
+/* line 41, ../sass/style.sass */
+.listItems {
+  padding-top: 12px; }
+  /* line 47, ../sass/components.sass */
+  .listItems li {
+    padding-top: 24px; }
+  /* line 49, ../sass/components.sass */
+  .listItems a {
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+    top: 5.7px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(255, 187, 47, 0);
+    line-height: 23px; }
+  /* line 54, ../sass/components.sass */
+  .listItems a:hover {
+    border-bottom: 1px solid #ffbb2f; }
+  /* line 56, ../sass/components.sass */
+  .listItems p {
+    font-size: 18px;
+    line-height: 24px;
+    position: relative;
+    top: 5.7px;
+    display: block;
+    height: 48px;
+    overflow: hidden; }
 
 /* line 43, ../sass/style.sass */
 .altsSearchInput {
@@ -437,7 +464,7 @@ textarea {
   display: inline-block;
   width: auto;
   padding: 0 24px; }
-  /* line 123, ../sass/components.sass */
+  /* line 141, ../sass/components.sass */
   .altsSearchButton svg, .answerCommentResponseButton svg, .questionResponseButton svg, .answerResponseButton svg {
     width: 48px;
     height: 48px;
@@ -447,7 +474,7 @@ textarea {
     margin-left: -24px; }
 
 /* line 47, ../sass/style.sass */
-.altsQuestionButton, .answerResponseShow {
+.altsQuestionButton, .answerResponseShow, .ctaButtonBack {
   text-decoration: none;
   width: 300px;
   display: block;
@@ -462,8 +489,8 @@ textarea {
   float: inherit;
   display: inherit;
   padding: inherit; }
-  /* line 123, ../sass/components.sass */
-  .altsQuestionButton svg, .answerResponseShow svg {
+  /* line 141, ../sass/components.sass */
+  .altsQuestionButton svg, .answerResponseShow svg, .ctaButtonBack svg {
     width: 48px;
     height: 48px;
     vertical-align: middle;
@@ -471,10 +498,10 @@ textarea {
     top: -2px;
     margin-left: -24px; }
 
-/* line 146, ../sass/components.sass */
+/* line 164, ../sass/components.sass */
 .expandable > * {
   transition: height 0.025s; }
-/* line 148, ../sass/components.sass */
+/* line 166, ../sass/components.sass */
 .expandable .trigger {
   text-decoration: none;
   width: 300px;
@@ -490,7 +517,7 @@ textarea {
   float: inherit;
   display: inherit;
   padding: inherit; }
-  /* line 123, ../sass/components.sass */
+  /* line 141, ../sass/components.sass */
   .expandable .trigger svg {
     width: 48px;
     height: 48px;
@@ -498,7 +525,7 @@ textarea {
     position: relative;
     top: -2px;
     margin-left: -24px; }
-/* line 150, ../sass/components.sass */
+/* line 168, ../sass/components.sass */
 .expandable .collapsed {
   height: 0;
   border: 0; }
@@ -516,16 +543,16 @@ textarea {
   line-height: 24px;
   position: relative;
   top: 5.7px; }
-  /* line 68, ../sass/components.sass */
+  /* line 86, ../sass/components.sass */
   .questionAuthor .formal, .answerAuthor .formal, .questionCommentAuthor .formal, .answerCommentAuthor .formal {
     display: block;
     color: #378DF1;
     font-weight: bold; }
 
-/* line 80, ../sass/components.sass */
+/* line 98, ../sass/components.sass */
 .cta .ctaLogo {
   padding-top: 24px; }
-/* line 82, ../sass/components.sass */
+/* line 100, ../sass/components.sass */
 .cta .ctaHeader {
   padding-top: 12px;
   font-size: 28px;
@@ -534,11 +561,11 @@ textarea {
   top: 8.2px;
   text-align: center;
   font-weight: bold; }
-/* line 87, ../sass/components.sass */
+/* line 105, ../sass/components.sass */
 .cta .ctaButton {
   padding-top: 36px;
   cursor: pointer; }
-  /* line 158, ../sass/components.sass */
+  /* line 176, ../sass/components.sass */
   .cta .ctaButton .buttonLink {
     text-decoration: none;
     width: 300px;
@@ -551,7 +578,7 @@ textarea {
     margin: 0 auto;
     border: 0;
     transform: translate3d(0, 0, 0); }
-    /* line 123, ../sass/components.sass */
+    /* line 141, ../sass/components.sass */
     .cta .ctaButton .buttonLink svg {
       width: 48px;
       height: 48px;
@@ -559,7 +586,7 @@ textarea {
       position: relative;
       top: -2px;
       margin-left: -24px; }
-  /* line 162, ../sass/components.sass */
+  /* line 180, ../sass/components.sass */
   .cta .ctaButton .buttonHover {
     text-decoration: none;
     width: 300px;
@@ -573,7 +600,7 @@ textarea {
     border: 0;
     font-size: 14px;
     transform: rotateX(-90deg) translateZ(-24px); }
-    /* line 123, ../sass/components.sass */
+    /* line 141, ../sass/components.sass */
     .cta .ctaButton .buttonHover svg {
       width: 48px;
       height: 48px;
@@ -581,20 +608,20 @@ textarea {
       position: relative;
       top: -2px;
       margin-left: -24px; }
-  /* line 168, ../sass/components.sass */
+  /* line 186, ../sass/components.sass */
   .cta .ctaButton .buttonDefault {
     border-radius: 4px; }
-  /* line 172, ../sass/components.sass */
+  /* line 190, ../sass/components.sass */
   body.ie .cta .ctaButton .buttonHover {
     display: none; }
-  /* line 177, ../sass/components.sass */
+  /* line 195, ../sass/components.sass */
   body:not(.ie) .cta .ctaButton .hoverable {
     transition: all 150ms ease;
     transform-style: preserve-3d; }
-    /* line 181, ../sass/components.sass */
+    /* line 199, ../sass/components.sass */
     body:not(.ie) .cta .ctaButton .hoverable .buttonDefault {
       transform: translateZ(24px); }
-  /* line 183, ../sass/components.sass */
+  /* line 201, ../sass/components.sass */
   body:not(.ie) .cta .ctaButton:hover .hoverable {
     transform: rotateX(90deg); }
 
@@ -605,7 +632,7 @@ textarea {
   width: 197px;
   position: relative;
   top: 2px; }
-  /* line 97, ../sass/components.sass */
+  /* line 115, ../sass/components.sass */
   .footerLogotype .logotype-icon, .ctaLogo .logotype-icon {
     width: 197px;
     display: block;
@@ -623,15 +650,15 @@ textarea {
   transform: translateX(-50%); }
 
 /* line 68, ../sass/style.sass */
-.questionWrapper {
+.questionWrapper, .listWrapper {
   background: #009B58; }
 
 /* line 70, ../sass/style.sass */
-.questionResponseButton, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
+.questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
   background: #FFBB2F;
   color: #6C4B00; }
   /* line 73, ../sass/style.sass */
-  .questionResponseButton:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
+  .questionResponseButton:hover, .ctaButtonBack:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
     background: #db9a26; }
 
 /* line 76, ../sass/style.sass */
@@ -647,7 +674,7 @@ textarea {
   color: #009B58; }
 
 /* line 82, ../sass/style.sass */
-.answerCommentsHeader {
+.answerCommentsHeader, .listItemHeader {
   color: #FFBB2F; }
 
 /* line 84, ../sass/style.sass */

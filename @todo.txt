@@ -1,4 +1,4 @@
-
+rensa upp svg:n
 
 Mobile, lägg i varje komponent.(dubbla spaltbrädden som break-poin kanske?)
 @media screen and (max-width: 1130px)
@@ -56,6 +56,3 @@ Mobile, lägg i varje komponent.(dubbla spaltbrädden som break-poin kanske?)
 		margin-bottom: 28px
 
 
-
-Fixa andar vyer
-rensa upp svg:n

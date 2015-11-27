@@ -43,15 +43,33 @@
 		margin-top: base(0.5)
 
 =list
+	padding-top: +base(.5)
+	li
+		padding-top: base()
+	a
+		+font-size($small)
+		font-weight: bold
+		border-bottom: 1px solid rgba($yellow, 0)
+		line-height: 23px//compensation for border-bottom
+	a:hover
+		border-bottom: 1px solid rgba($yellow, 1)
+	p
+		+font-size($small)
+		display: block
+		height: base(2)
+		overflow: hidden
+
+
+=smallList
 	padding-left: 22px
 	li
-		+font-size($small)
 		list-style-image: inline-image("arrow.svg")
+		+font-size($small)
 		padding-top: base(.5)
 	a
-		border-bottom: 1px solid rgba(256, 256, 256, 0)
+		border-bottom: 1px solid rgba(white, 0)
 	a:hover
-		border-bottom: 1px solid rgba(256, 256, 256, 1)
+		border-bottom: 1px solid rgba(white, 1)
 
 =input
 	margin-top: base()

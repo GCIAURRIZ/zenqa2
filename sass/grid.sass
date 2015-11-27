@@ -15,9 +15,7 @@
 	>*
 		padding: base() base(2) base(2)
 		width: $sidebar
-	>*:last-child
-		padding-bottom: 0
-		height: 100vh
+
 
 =alternatives
 	&.topFix
@@ -26,6 +24,8 @@
 	&.bottomFix
 		position: absolute
 		bottom: 0
+		top: initial
+		max-height: 100vh
 	>*:first-child::before
 		content: none
 	>*
@@ -69,6 +69,14 @@
 
 =border-top
 	&::before
+		content: ''
+		border-top-width: 1px
+		border-top-style: solid
+		display: block
+		margin-top: -1px
+
+=border-bottom
+	&::after
 		content: ''
 		border-top-width: 1px
 		border-top-style: solid

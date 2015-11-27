@@ -121,6 +121,10 @@ var Utils = {
         el.className += ' ' + className;
       }
     }
+  },
+
+  snap: function() {
+    app.snap =  window.innerHeight < $('.alts').height();
   }
 
 };

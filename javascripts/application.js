@@ -5,6 +5,7 @@
 // @koala-prepend "modules/zenconomy_analytics.js"
 // @koala-prepend "modules/alts.js"
 // @koala-prepend "modules/expandable.js"
+// @koala-prepend "modules/otherQuestions.js"
 
 
 // Init global app scope
@@ -17,12 +18,14 @@ app.window = $(window);
 // Check if IE.
 Utils.isIE();
 
+//check if sidebar should snapp
+Utils.snap();
+
 // Define all JS-modules, what selectors that triggers them and load em'
 
 modules = [
- {'name': 'Human',             'selector': 'html',                 'class': Human},
- {'name': 'Alts',              'selector': '.alts',                'class': Alts},
- {'name': 'Expandable',           'selector': '.expandable',      'class': Expandable}
+  {'name': 'Human',             'selector': 'html',                 'class': Human},
+  {'name': 'Expandable',        'selector': '.expandable',          'class': Expandable},
 //  {'name': 'State',             'selector': '.dynamicState',       'class': State},
 //  {'name': 'Introduction',      'selector': '.introduction',        'class': Introduction},
 //  {'name': 'Demo',              'selector': '.demo',                'class': Demo},
@@ -33,6 +36,11 @@ modules = [
 //  {'name': 'QuoteCarousel',     'selector': '.carousel',            'class': QuoteCarousel},
 //  {'name': 'Tracking',          'selector': '.main',                 'class': Tracking}
 ];
+
+if(app.snap){
+  modules.push({'name': 'Alts',              'selector': '.alts',                'class': Alts})
+  modules.push({'name': 'OtherQuestions',    'selector': '.altsOtherQuestions','class': OtherQuestions})
+}
 
 $(modules).each(function() {
   var _this = this,
@@ -64,7 +72,7 @@ window.onload = function() {
 app.window.on('scroll',
   Utils.throttle(function() {
     if(app.Tracking) { app.Tracking.section(); }
-    if(app.Alts) { app.Alts.onScroll(); }
+    if(app.Alts && app.snap) { app.Alts.onScroll(); }
   }, 10)
 );
 
