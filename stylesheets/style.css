@@ -488,7 +488,7 @@ textarea {
   margin-top: 24px;
   float: inherit;
   display: inherit;
-  padding: inherit; }
+  padding: 0; }
   /* line 141, ../sass/components.sass */
   .altsQuestionButton svg, .answerResponseShow svg, .ctaButtonBack svg {
     width: 48px;
@@ -516,7 +516,7 @@ textarea {
   margin-top: 24px;
   float: inherit;
   display: inherit;
-  padding: inherit; }
+  padding: 0; }
   /* line 141, ../sass/components.sass */
   .expandable .trigger svg {
     width: 48px;
