@@ -226,7 +226,7 @@ textarea {
 /* line 19, ../sass/style.sass */
 .questionComment, .answerComment {
   margin-top: 36px; }
-  /* line 71, ../sass/grid.sass */
+  /* line 91, ../sass/grid.sass */
   .questionComment::before, .answerComment::before {
     content: "";
     border-top-width: 1px;
@@ -260,7 +260,7 @@ textarea {
 .alts > * {
   position: relative;
   padding-bottom: 36px; }
-  /* line 71, ../sass/grid.sass */
+  /* line 91, ../sass/grid.sass */
   .alts > *::before {
     content: "";
     border-top-width: 1px;
@@ -277,7 +277,15 @@ textarea {
 /* line 23, ../sass/style.sass */
 .footer {
   padding: 0 8%; }
-  /* line 52, ../sass/grid.sass */
+  @media screen and (max-width: 1130px) {
+    /* line 23, ../sass/style.sass */
+    .footer {
+      padding: 0 4%; } }
+  @media screen and (max-width: 916px) {
+    /* line 23, ../sass/style.sass */
+    .footer {
+      padding: 0 8%; } }
+  /* line 56, ../sass/grid.sass */
   .footer .footer-navigation {
     padding-top: 120px;
     padding-bottom: 84px;
@@ -292,25 +300,55 @@ textarea {
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end; }
-    /* line 58, ../sass/grid.sass */
+    @media screen and (max-width: 1130px) {
+      /* line 56, ../sass/grid.sass */
+      .footer .footer-navigation {
+        padding: 72px 0 60px; } }
+    @media screen and (max-width: 916px) {
+      /* line 56, ../sass/grid.sass */
+      .footer .footer-navigation {
+        display: block;
+        padding-top: 24px; } }
+    /* line 67, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigationSection {
       margin-right: 84px;
       font-size: 18px;
       line-height: 24px;
       position: relative;
       top: 5.7px; }
-    /* line 61, ../sass/grid.sass */
+      @media screen and (max-width: 1130px) {
+        /* line 67, ../sass/grid.sass */
+        .footer .footer-navigation .footer-navigationSection {
+          font-size: 16px;
+          line-height: 24px;
+          position: relative;
+          top: 6.4px;
+          margin-right: 48px; } }
+      @media screen and (max-width: 916px) {
+        /* line 67, ../sass/grid.sass */
+        .footer .footer-navigation .footer-navigationSection {
+          margin-top: 24px;
+          font-size: 18px;
+          line-height: 24px;
+          position: relative;
+          top: 5.7px;
+          margin-right: 0; } }
+    /* line 77, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigationSection:last-child {
       margin-right: 0; }
-    /* line 63, ../sass/grid.sass */
+    /* line 79, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigationLink {
       display: block; }
-      /* line 65, ../sass/grid.sass */
+      /* line 81, ../sass/grid.sass */
       .footer .footer-navigation .footer-navigationLink:first-of-type {
         margin-top: 12px; }
-    /* line 67, ../sass/grid.sass */
+    /* line 83, ../sass/grid.sass */
     .footer .footer-navigation .footerLogotype {
       flex-grow: 1; }
+      @media screen and (max-width: 916px) {
+        /* line 83, ../sass/grid.sass */
+        .footer .footer-navigation .footerLogotype {
+          display: none; } }
 
 /* line 27, ../sass/style.sass */
 .questionTitle {
@@ -530,16 +568,80 @@ textarea {
   height: 0;
   border: 0; }
 
-/* line 54, ../sass/style.sass */
+/* line 53, ../sass/style.sass */
+.questionWrapper, .listWrapper {
+  background: #009B58; }
+
+/* line 55, ../sass/style.sass */
+.questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
+  background: #FFBB2F;
+  color: #6C4B00; }
+  /* line 58, ../sass/style.sass */
+  .questionResponseButton:hover, .ctaButtonBack:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
+    background: #db9a26; }
+
+/* line 61, ../sass/style.sass */
+.questionResponseTextarea {
+  border-color: #06452A; }
+
+/* line 63, ../sass/style.sass */
+.answerWrapper {
+  color: #4A4A4A; }
+
+/* line 65, ../sass/style.sass */
+.answerHeader {
+  color: #009B58; }
+
+/* line 67, ../sass/style.sass */
+.answerCommentsHeader, .listItemHeader {
+  color: #FFBB2F; }
+
+/* line 69, ../sass/style.sass */
+.context {
+  background: #4A4A4A; }
+
+/* line 71, ../sass/style.sass */
+.cta {
+  background: #378DF1; }
+
+/* line 74, ../sass/style.sass */
+.ctaButton .buttonDefault {
+  color: #6C4B00;
+  background: #FFBB2F; }
+/* line 77, ../sass/style.sass */
+.ctaButton .buttonHover {
+  color: white;
+  background: #009B58; }
+
+/* line 80, ../sass/style.sass */
+.alts {
+  background: #4A4A4A; }
+
+/* line 83, ../sass/style.sass */
+.footer {
+  background: #378DF1; }
+
+/* line 86, ../sass/style.sass */
+.footer-navigationTitle {
+  color: black; }
+
+/* line 89, ../sass/style.sass */
+.footer-navigationLink {
+  color: white; }
+  /* line 91, ../sass/style.sass */
+  .footer-navigationLink:hover {
+    color: #0d294a; }
+
+/* line 95, ../sass/style.sass */
 .questionComments, .answerComments {
   margin-left: 36px;
   margin-top: 24px; }
 
-/* line 57, ../sass/style.sass */
+/* line 98, ../sass/style.sass */
 .questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor {
   font-weight: bold;
   text-align: right;
-  font-size: 18;
+  font-size: 18px;
   line-height: 24px;
   position: relative;
   top: 5.7px; }
@@ -625,7 +727,7 @@ textarea {
   body:not(.ie) .cta .ctaButton:hover .hoverable {
     transform: rotateX(90deg); }
 
-/* line 61, ../sass/style.sass */
+/* line 102, ../sass/style.sass */
 .footerLogotype, .ctaLogo {
   display: block;
   margin: 0 auto;
@@ -638,7 +740,7 @@ textarea {
     display: block;
     height: 48px; }
 
-/* line 64, ../sass/style.sass */
+/* line 105, ../sass/style.sass */
 .altsSearchLabel, .altsOtherLabel {
   background: #4A4A4A;
   position: absolute;
@@ -649,86 +751,22 @@ textarea {
   text-align: center;
   transform: translateX(-50%); }
 
-/* line 68, ../sass/style.sass */
-.questionWrapper, .listWrapper {
-  background: #009B58; }
-
-/* line 70, ../sass/style.sass */
-.questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
-  background: #FFBB2F;
-  color: #6C4B00; }
-  /* line 73, ../sass/style.sass */
-  .questionResponseButton:hover, .ctaButtonBack:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
-    background: #db9a26; }
-
-/* line 76, ../sass/style.sass */
-.questionResponseTextarea {
-  border-color: #06452A; }
-
-/* line 78, ../sass/style.sass */
-.answerWrapper {
-  color: #4A4A4A; }
-
-/* line 80, ../sass/style.sass */
-.answerHeader {
-  color: #009B58; }
-
-/* line 82, ../sass/style.sass */
-.answerCommentsHeader, .listItemHeader {
-  color: #FFBB2F; }
-
-/* line 84, ../sass/style.sass */
-.context {
-  background: #4A4A4A; }
-
-/* line 86, ../sass/style.sass */
-.cta {
-  background: #378DF1; }
-
-/* line 89, ../sass/style.sass */
-.ctaButton .buttonDefault {
-  color: #6C4B00;
-  background: #FFBB2F; }
-/* line 92, ../sass/style.sass */
-.ctaButton .buttonHover {
-  color: white;
-  background: #009B58; }
-
-/* line 95, ../sass/style.sass */
-.alts {
-  background: #4A4A4A; }
-
-/* line 98, ../sass/style.sass */
-.footer {
-  background: #378DF1; }
-
-/* line 101, ../sass/style.sass */
-.footer-navigationTitle {
-  color: black; }
-
-/* line 104, ../sass/style.sass */
-.footer-navigationLink {
-  color: white; }
-  /* line 106, ../sass/style.sass */
-  .footer-navigationLink:hover {
-    color: #0d294a; }
-
-/* line 110, ../sass/style.sass */
+/* line 108, ../sass/style.sass */
 .contentWrapper {
   position: relative; }
 
-/* line 113, ../sass/style.sass */
+/* line 111, ../sass/style.sass */
 .altsSearchLabel {
   font-style: italic; }
 
-/* line 115, ../sass/style.sass */
+/* line 113, ../sass/style.sass */
 .questionCommentAuthor, .answerCommentAuthor {
-  font-size: 14;
+  font-size: 14px;
   line-height: 24px;
   position: relative;
   top: 7.1px;
   margin-top: 0; }
 
-/* line 119, ../sass/style.sass */
+/* line 117, ../sass/style.sass */
 .answerWrapper {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTYwcHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDU2MCAxMC4wOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTYwIDEwLjA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMDlCNTgiIGQ9Ik0wLDBoNTYwYzAsMS4zNDYsMC0wLjY3MywwLDAuNTA0bC0yMC4wMTIsOS41ODZsLTIwLjAxMy05LjU4NmwtMjAuMDEzLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4Ng0KCQlsLTIwLjAxMi05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZMMzc5Ljg5LDEwLjA5bC0yMC4wMTMtOS41ODZsLTE5Ljg0NCw5LjU4NkwzMjAuMDIsMC41MDRsLTIwLjAxMiw5LjU4NkwyODAsMC41MDQNCgkJbC0yMC4wMTIsOS41ODZsLTIwLjAxNC05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4NmwtMjAuMDEyLTkuNTg2bC0yMC4wMTIsOS41ODZsLTIwLjAxMi05LjU4NmwtMTkuODQ0LDkuNTg2DQoJCUw4MC4wNDUsMC41MDRMNjAuMDMzLDEwLjA5TDQwLjAyMSwwLjUwNEwyMC4wMDgsMTAuMDlMMCwwLjUwNEMwLDAsMCwwLjE2OCwwLDB6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==') white repeat-x; }

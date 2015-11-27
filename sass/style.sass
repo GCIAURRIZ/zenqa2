@@ -49,21 +49,6 @@
 .expandable
 	+expandable
 
-
-//Custom
-.questionComments, .answerComments
-	margin-left: base(1.5)
-	margin-top: base()
-.questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor
-	+author
-.cta
-	+ad
-.footerLogotype, .ctaLogo
-	+logo
-
-.altsSearchLabel, .altsOtherLabel
-	+altLabel
-
 //Colors
 .questionWrapper, .listWrapper
 	background: $green
@@ -107,13 +92,26 @@
 		color: $darkerBlue
 
 //Custom styles
+.questionComments, .answerComments
+	margin-left: base(1.5)
+	margin-top: base()
+.questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor
+	+author
+.cta
+	+ad
+.footerLogotype, .ctaLogo
+	+logo
+
+.altsSearchLabel, .altsOtherLabel
+	+altLabel
+
 .contentWrapper
 	position: relative
 
 .altsSearchLabel
 	font-style: italic
 .questionCommentAuthor, .answerCommentAuthor
-	+font-size(14)
+	+font-size($xSmall)
 	margin-top: 0
 
 .answerWrapper

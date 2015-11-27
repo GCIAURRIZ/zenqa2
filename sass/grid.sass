@@ -49,15 +49,31 @@
 
 =footer
 	padding: 0 8%
+	@media #{$maxWidth}
+		padding: 0 4%
+	@media #{$mobileWidth}
+		padding: 0 8%
 	.footer-navigation
 		padding-top: base(5)
 		padding-bottom: base(3.5)
 		margin: 0 auto
 		@include flexbox
 		@include justify-content(flex-end)
+		@media #{$maxWidth}
+			padding: base(3) 0 base(2.5)
+		@media #{$mobileWidth}
+			display: block
+			padding-top: base()
 		.footer-navigationSection
 			margin-right: base(3.5)
 			+font-size($small)
+			@media #{$maxWidth}
+				+font-size(16px)
+				margin-right: base(2)
+			@media #{$mobileWidth}
+				margin-top: base()
+				+font-size($small)
+				margin-right: 0
 		.footer-navigationSection:last-child
 			margin-right: 0
 		.footer-navigationLink
@@ -66,6 +82,10 @@
 				margin-top: base(.5)
 		.footerLogotype
 			flex-grow: 1
+			@media #{$mobileWidth}
+				display: none
+
+
 
 =border-top
 	&::before
