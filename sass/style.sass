@@ -40,19 +40,23 @@
 	+smallList
 .listItems
 	+list
+.altsSearchForm
+	display: flex
 .altsSearchInput
-	+input
-.altsSearchButton,  .answerCommentResponseButton, .questionResponseButton, .answerResponseButton,
+	+altInput
+.mobileMenuAsk, .altsSearchButton,  .answerCommentResponseButton, .questionResponseButton, .answerResponseButton,
 	+button('inline')
 .altsQuestionButton, .answerResponseShow, .ctaButtonBack
 	+button
+.mobileMenu
+	+mobileMenu
 .expandable
 	+expandable
 
 //Colors
 .questionWrapper, .listWrapper
 	background: $green
-.questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton
+.mobileMenuAsk, .questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton
 	background: $yellow
 	color: $darkYellow
 	&:hover
@@ -95,6 +99,8 @@
 .questionComments, .answerComments
 	margin-left: base(1.5)
 	margin-top: base()
+	@media #{$mobileWidth}
+		margin-left: 0
 .questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor
 	+author
 .cta

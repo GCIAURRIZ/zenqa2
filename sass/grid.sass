@@ -3,9 +3,15 @@
 	padding-top: base()
 	padding-right: $sidebar
 	overflow: auto
+	&:first-child
+		padding-top: base(.5)
 	>*
 		float: right
 		padding: 0 8% base(2)
+	@media #{$mobileWidth}
+		padding-right: initial
+		>*
+			float: left
 
 =sidebar
 	position: absolute
@@ -15,9 +21,11 @@
 	>*
 		padding: base() base(2) base(2)
 		width: $sidebar
-
+	@media #{$mobileWidth}
+		display: none
 
 =alternatives
+	//stickyness
 	&.topFix
 		position: fixed
 		top: 0
@@ -26,16 +34,20 @@
 		bottom: 0
 		top: initial
 		max-height: 100vh
-	>*:first-child::before
-		content: none
+
+	>*:first-child
+		&::before
+			content: none
 	>*
 		position: relative
 		padding-bottom: base(1.5)
 		+border-top
 		&::before
 			padding-top: base(.5)
+
 	>*:last-child
 		padding-bottom: 0
+
 
 =comment
 	+border-top
@@ -48,35 +60,29 @@
 		padding-top: base(.5)
 
 =footer
-	padding: 0 8%
-	@media #{$maxWidth}
-		padding: 0 4%
+	padding: 0 4%
 	@media #{$mobileWidth}
-		padding: 0 8%
+		padding: 0 8% base(2)
 	.footer-navigation
-		padding-top: base(5)
+		padding: base(3) 0 base(2.5)
 		padding-bottom: base(3.5)
 		margin: 0 auto
 		@include flexbox
 		@include justify-content(flex-end)
-		@media #{$maxWidth}
-			padding: base(3) 0 base(2.5)
 		@media #{$mobileWidth}
 			display: block
 			padding-top: base()
 		.footer-navigationSection
-			margin-right: base(3.5)
-			+font-size($small)
-			@media #{$maxWidth}
-				+font-size(16px)
-				margin-right: base(2)
+			margin-right: base(2)
 			@media #{$mobileWidth}
 				margin-top: base()
-				+font-size($small)
 				margin-right: 0
 		.footer-navigationSection:last-child
 			margin-right: 0
+		.footer-navigationTitle
+			+font-size($small)
 		.footer-navigationLink
+			+font-size($small)
 			display: block
 			&:first-of-type
 				margin-top: base(.5)
@@ -111,7 +117,6 @@ $baseline: 24px
 	$val: $baseline*$count + $offset
 	@return $val
 
-//@if $line-height ..
 =font-size($font-size, $line-height: $baseline, $cap-height: 0.7)
 	$baseline-distance: ($line-height - ($cap-height*$font-size)) / 2
 	font-size: $font-size

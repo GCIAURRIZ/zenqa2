@@ -1,34 +1,25 @@
+Desktop
+
+mobil:
+ - px-storlekar på alla vanliga saker i mobilen, nog med en funktion.
+ - knapp-storleken
+ - menyn knapp-color
+
+vw-grejjen, inbyggd media-query? – Nog för svårt.
+
+overlay-test
 
 
-Mobile, lägg i varje komponent.(dubbla spaltbrädden som break-poin kanske?)
+Testa breakpoints tablet, lagom stora knappar?
 
-@media screen and (max-width: 840px)
-	.footer
-		height: auto
-		padding: 50px 38px
-		position: relative
+Mobile
+Mobil-variablenamn
 
-	.footer__logotype
-		position: absolute
-	//	right: $default-side-padding-mobile
-		bottom: 50px
+vw för fonter och sånt.
 
-	.footer__logotype-icon
-		display: none
-
-	.footer-navigation
-		float: none
-		margin-top: 0
-		display: block
-
-	.footer-navigation__section
-		margin-right: 0
-
-	.footer-navigation__section:nth-of-type(1),
-	.footer-navigation__section:nth-of-type(2)
-		display: none
-
-	.footer-navigation__section:nth-of-type(3)
-		margin-bottom: 28px
+hover i mobil? andra states?
+knappar och sånt
 
 rensa upp svg:n
+
+test-bredd: 1334px

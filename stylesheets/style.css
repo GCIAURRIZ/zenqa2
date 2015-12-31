@@ -208,9 +208,19 @@ textarea {
   padding-right: 458px;
   overflow: auto; }
   /* line 6, ../sass/grid.sass */
+  .questionWrapper:first-child, .answerWrapper:first-child, .listWrapper:first-child {
+    padding-top: 12px; }
+  /* line 8, ../sass/grid.sass */
   .questionWrapper > *, .answerWrapper > *, .listWrapper > * {
     float: right;
     padding: 0 8% 48px; }
+  @media screen and (max-width: 916px) {
+    /* line 14, ../sass/style.sass */
+    .questionWrapper, .answerWrapper, .listWrapper {
+      padding-right: initial; }
+      /* line 13, ../sass/grid.sass */
+      .questionWrapper > *, .answerWrapper > *, .listWrapper > * {
+        float: left; } }
 
 /* line 17, ../sass/style.sass */
 .context {
@@ -218,76 +228,76 @@ textarea {
   top: 0;
   right: 0;
   height: 100%; }
-  /* line 15, ../sass/grid.sass */
+  /* line 21, ../sass/grid.sass */
   .context > * {
     padding: 24px 48px 48px;
     width: 458px; }
+  @media screen and (max-width: 916px) {
+    /* line 17, ../sass/style.sass */
+    .context {
+      display: none; } }
 
 /* line 19, ../sass/style.sass */
 .questionComment, .answerComment {
   margin-top: 36px; }
-  /* line 91, ../sass/grid.sass */
+  /* line 97, ../sass/grid.sass */
   .questionComment::before, .answerComment::before {
     content: "";
     border-top-width: 1px;
     border-top-style: solid;
     display: block;
     margin-top: -1px; }
-  /* line 43, ../sass/grid.sass */
+  /* line 55, ../sass/grid.sass */
   .questionComment:first-of-type, .answerComment:first-of-type {
     margin-top: 0; }
-    /* line 45, ../sass/grid.sass */
+    /* line 57, ../sass/grid.sass */
     .questionComment:first-of-type::before, .answerComment:first-of-type::before {
       content: none; }
-  /* line 47, ../sass/grid.sass */
+  /* line 59, ../sass/grid.sass */
   .questionComment::before, .answerComment::before {
     padding-top: 12px; }
 
-/* line 21, ../sass/grid.sass */
+/* line 29, ../sass/grid.sass */
 .alts.topFix {
   position: fixed;
   top: 0; }
-/* line 24, ../sass/grid.sass */
+/* line 32, ../sass/grid.sass */
 .alts.bottomFix {
   position: absolute;
   bottom: 0;
   top: initial;
   max-height: 100vh; }
-/* line 29, ../sass/grid.sass */
+/* line 39, ../sass/grid.sass */
 .alts > *:first-child::before {
   content: none; }
-/* line 31, ../sass/grid.sass */
+/* line 41, ../sass/grid.sass */
 .alts > * {
   position: relative;
   padding-bottom: 36px; }
-  /* line 91, ../sass/grid.sass */
+  /* line 97, ../sass/grid.sass */
   .alts > *::before {
     content: "";
     border-top-width: 1px;
     border-top-style: solid;
     display: block;
     margin-top: -1px; }
-  /* line 35, ../sass/grid.sass */
+  /* line 45, ../sass/grid.sass */
   .alts > *::before {
     padding-top: 12px; }
-/* line 37, ../sass/grid.sass */
+/* line 48, ../sass/grid.sass */
 .alts > *:last-child {
   padding-bottom: 0; }
 
 /* line 23, ../sass/style.sass */
 .footer {
-  padding: 0 8%; }
-  @media screen and (max-width: 1130px) {
-    /* line 23, ../sass/style.sass */
-    .footer {
-      padding: 0 4%; } }
+  padding: 0 4%; }
   @media screen and (max-width: 916px) {
     /* line 23, ../sass/style.sass */
     .footer {
-      padding: 0 8%; } }
-  /* line 56, ../sass/grid.sass */
+      padding: 0 8% 48px; } }
+  /* line 66, ../sass/grid.sass */
   .footer .footer-navigation {
-    padding-top: 120px;
+    padding: 72px 0 60px;
     padding-bottom: 84px;
     margin: 0 auto;
     display: -webkit-box;
@@ -300,53 +310,43 @@ textarea {
     -webkit-justify-content: flex-end;
     -moz-justify-content: flex-end;
     justify-content: flex-end; }
-    @media screen and (max-width: 1130px) {
-      /* line 56, ../sass/grid.sass */
-      .footer .footer-navigation {
-        padding: 72px 0 60px; } }
     @media screen and (max-width: 916px) {
-      /* line 56, ../sass/grid.sass */
+      /* line 66, ../sass/grid.sass */
       .footer .footer-navigation {
         display: block;
         padding-top: 24px; } }
-    /* line 67, ../sass/grid.sass */
+    /* line 75, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigationSection {
-      margin-right: 84px;
+      margin-right: 48px; }
+      @media screen and (max-width: 916px) {
+        /* line 75, ../sass/grid.sass */
+        .footer .footer-navigation .footer-navigationSection {
+          margin-top: 24px;
+          margin-right: 0; } }
+    /* line 80, ../sass/grid.sass */
+    .footer .footer-navigation .footer-navigationSection:last-child {
+      margin-right: 0; }
+    /* line 82, ../sass/grid.sass */
+    .footer .footer-navigation .footer-navigationTitle {
       font-size: 18px;
       line-height: 24px;
       position: relative;
       top: 5.7px; }
-      @media screen and (max-width: 1130px) {
-        /* line 67, ../sass/grid.sass */
-        .footer .footer-navigation .footer-navigationSection {
-          font-size: 16px;
-          line-height: 24px;
-          position: relative;
-          top: 6.4px;
-          margin-right: 48px; } }
-      @media screen and (max-width: 916px) {
-        /* line 67, ../sass/grid.sass */
-        .footer .footer-navigation .footer-navigationSection {
-          margin-top: 24px;
-          font-size: 18px;
-          line-height: 24px;
-          position: relative;
-          top: 5.7px;
-          margin-right: 0; } }
-    /* line 77, ../sass/grid.sass */
-    .footer .footer-navigation .footer-navigationSection:last-child {
-      margin-right: 0; }
-    /* line 79, ../sass/grid.sass */
+    /* line 84, ../sass/grid.sass */
     .footer .footer-navigation .footer-navigationLink {
+      font-size: 18px;
+      line-height: 24px;
+      position: relative;
+      top: 5.7px;
       display: block; }
-      /* line 81, ../sass/grid.sass */
+      /* line 87, ../sass/grid.sass */
       .footer .footer-navigation .footer-navigationLink:first-of-type {
         margin-top: 12px; }
-    /* line 83, ../sass/grid.sass */
+    /* line 89, ../sass/grid.sass */
     .footer .footer-navigation .footerLogotype {
       flex-grow: 1; }
       @media screen and (max-width: 916px) {
-        /* line 83, ../sass/grid.sass */
+        /* line 89, ../sass/grid.sass */
         .footer .footer-navigation .footerLogotype {
           display: none; } }
 
@@ -374,6 +374,19 @@ textarea {
   .questionTitle span {
     padding-left: 72px;
     display: block; }
+  @media screen and (max-width: 916px) {
+    /* line 27, ../sass/style.sass */
+    .questionTitle {
+      font-size: 24px;
+      line-height: 24px;
+      position: relative;
+      top: 3.6px; }
+      /* line 22, ../sass/components.sass */
+      .questionTitle svg {
+        display: none; }
+      /* line 24, ../sass/components.sass */
+      .questionTitle span {
+        padding-left: initial; } }
 
 /* line 29, ../sass/style.sass */
 .answerHeader, .listTitle {
@@ -389,6 +402,19 @@ textarea {
     width: 60px;
     height: 60px;
     vertical-align: middle; }
+  @media screen and (max-width: 916px) {
+    /* line 29, ../sass/style.sass */
+    .answerHeader, .listTitle {
+      font-size: 24px;
+      line-height: 24px;
+      position: relative;
+      top: 3.6px; }
+      /* line 22, ../sass/components.sass */
+      .answerHeader svg, .listTitle svg {
+        display: none; }
+      /* line 24, ../sass/components.sass */
+      .answerHeader span, .listTitle span {
+        padding-left: initial; } }
 
 /* line 31, ../sass/style.sass */
 .questionCommentsHeader, .answerCommentsHeader {
@@ -408,10 +434,9 @@ textarea {
   top: 2.2px;
   padding-top: 24px;
   text-align: center;
-  font-weight: bold;
-  padding-bottom: 12px; }
+  font-weight: bold; }
 
-/* line 35, ../sass/components.sass */
+/* line 40, ../sass/components.sass */
 .questionText p, .answerText p {
   font-size: 18px;
   line-height: 24px;
@@ -420,7 +445,7 @@ textarea {
   margin-top: 24px;
   letter-spacing: 0.06em; }
 
-/* line 41, ../sass/components.sass */
+/* line 46, ../sass/components.sass */
 .questionCommentText p, .answerCommentText p {
   font-size: 14px;
   line-height: 24px;
@@ -431,7 +456,7 @@ textarea {
 /* line 39, ../sass/style.sass */
 .altsOtherQuestions {
   padding-left: 22px; }
-  /* line 65, ../sass/components.sass */
+  /* line 70, ../sass/components.sass */
   .altsOtherQuestions li {
     list-style-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc5JyBoZWlnaHQ9JzknIHZpZXdCb3g9JzAgMCA5IDknPgoJPHRleHQKCQlmb250LWZhbWlseT0iZ3QtaGFwdGlrLCBBcmlhbCwgc2Fucy1zZXJpZiIKICAgICAgICB4PScwJwogICAgICAgIHk9JzknCiAgICAgICAgZmlsbD0id2hpdGUiCiAgICA+CiAgICAgICAgCSYjeGJiOwogICAgPC90ZXh0Pgo8L3N2Zz4=');
     font-size: 18px;
@@ -439,20 +464,20 @@ textarea {
     position: relative;
     top: 5.7px;
     padding-top: 12px; }
-  /* line 69, ../sass/components.sass */
+  /* line 74, ../sass/components.sass */
   .altsOtherQuestions a {
     border-bottom: 1px solid rgba(255, 255, 255, 0); }
-  /* line 71, ../sass/components.sass */
+  /* line 76, ../sass/components.sass */
   .altsOtherQuestions a:hover {
     border-bottom: 1px solid white; }
 
 /* line 41, ../sass/style.sass */
 .listItems {
   padding-top: 12px; }
-  /* line 47, ../sass/components.sass */
+  /* line 52, ../sass/components.sass */
   .listItems li {
     padding-top: 24px; }
-  /* line 49, ../sass/components.sass */
+  /* line 54, ../sass/components.sass */
   .listItems a {
     font-size: 18px;
     line-height: 24px;
@@ -461,10 +486,10 @@ textarea {
     font-weight: bold;
     border-bottom: 1px solid rgba(255, 187, 47, 0);
     line-height: 23px; }
-  /* line 54, ../sass/components.sass */
+  /* line 59, ../sass/components.sass */
   .listItems a:hover {
     border-bottom: 1px solid #ffbb2f; }
-  /* line 56, ../sass/components.sass */
+  /* line 61, ../sass/components.sass */
   .listItems p {
     font-size: 18px;
     line-height: 24px;
@@ -475,6 +500,10 @@ textarea {
     overflow: hidden; }
 
 /* line 43, ../sass/style.sass */
+.altsSearchForm {
+  display: flex; }
+
+/* line 45, ../sass/style.sass */
 .altsSearchInput {
   margin-top: 24px;
   font-size: 24px;
@@ -483,12 +512,13 @@ textarea {
   line-height: 48px;
   border: 0;
   border-radius: 4px;
-  width: 278px; }
+  flex: 1;
+  margin-right: 12px; }
 
-/* line 45, ../sass/style.sass */
-.altsSearchButton, .answerCommentResponseButton, .questionResponseButton, .answerResponseButton {
+/* line 47, ../sass/style.sass */
+.mobileMenuAsk, .altsSearchButton, .answerCommentResponseButton, .questionResponseButton, .answerResponseButton {
   text-decoration: none;
-  width: 300px;
+  max-width: 300px;
   display: block;
   font-size: 18px;
   height: 48px;
@@ -502,8 +532,12 @@ textarea {
   display: inline-block;
   width: auto;
   padding: 0 24px; }
-  /* line 141, ../sass/components.sass */
-  .altsSearchButton svg, .answerCommentResponseButton svg, .questionResponseButton svg, .answerResponseButton svg {
+  @media screen and (max-width: 916px) {
+    /* line 47, ../sass/style.sass */
+    .mobileMenuAsk, .altsSearchButton, .answerCommentResponseButton, .questionResponseButton, .answerResponseButton {
+      font-size: 18pxpx; } }
+  /* line 157, ../sass/components.sass */
+  .mobileMenuAsk svg, .altsSearchButton svg, .answerCommentResponseButton svg, .questionResponseButton svg, .answerResponseButton svg {
     width: 48px;
     height: 48px;
     vertical-align: middle;
@@ -511,10 +545,10 @@ textarea {
     top: -2px;
     margin-left: -24px; }
 
-/* line 47, ../sass/style.sass */
+/* line 49, ../sass/style.sass */
 .altsQuestionButton, .answerResponseShow, .ctaButtonBack {
   text-decoration: none;
-  width: 300px;
+  max-width: 300px;
   display: block;
   font-size: 18px;
   height: 48px;
@@ -525,9 +559,12 @@ textarea {
   border: 0;
   margin-top: 24px;
   float: inherit;
-  display: inherit;
-  padding: 0; }
-  /* line 141, ../sass/components.sass */
+  display: inherit; }
+  @media screen and (max-width: 916px) {
+    /* line 49, ../sass/style.sass */
+    .altsQuestionButton, .answerResponseShow, .ctaButtonBack {
+      font-size: 18pxpx; } }
+  /* line 157, ../sass/components.sass */
   .altsQuestionButton svg, .answerResponseShow svg, .ctaButtonBack svg {
     width: 48px;
     height: 48px;
@@ -536,13 +573,28 @@ textarea {
     top: -2px;
     margin-left: -24px; }
 
-/* line 164, ../sass/components.sass */
+/* line 51, ../sass/style.sass */
+.mobileMenu {
+  display: none;
+  background: #4A4A4A;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  top: initial;
+  width: 100%;
+  padding: 0 4% 24px; }
+  @media screen and (max-width: 916px) {
+    /* line 51, ../sass/style.sass */
+    .mobileMenu {
+      display: block; } }
+
+/* line 191, ../sass/components.sass */
 .expandable > * {
   transition: height 0.025s; }
-/* line 166, ../sass/components.sass */
+/* line 193, ../sass/components.sass */
 .expandable .trigger {
   text-decoration: none;
-  width: 300px;
+  max-width: 300px;
   display: block;
   font-size: 18px;
   height: 48px;
@@ -553,9 +605,12 @@ textarea {
   border: 0;
   margin-top: 24px;
   float: inherit;
-  display: inherit;
-  padding: 0; }
-  /* line 141, ../sass/components.sass */
+  display: inherit; }
+  @media screen and (max-width: 916px) {
+    /* line 193, ../sass/components.sass */
+    .expandable .trigger {
+      font-size: 18pxpx; } }
+  /* line 157, ../sass/components.sass */
   .expandable .trigger svg {
     width: 48px;
     height: 48px;
@@ -563,81 +618,85 @@ textarea {
     position: relative;
     top: -2px;
     margin-left: -24px; }
-/* line 168, ../sass/components.sass */
+/* line 195, ../sass/components.sass */
 .expandable .collapsed {
   height: 0;
   border: 0; }
 
-/* line 53, ../sass/style.sass */
+/* line 57, ../sass/style.sass */
 .questionWrapper, .listWrapper {
   background: #009B58; }
 
-/* line 55, ../sass/style.sass */
-.questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
+/* line 59, ../sass/style.sass */
+.mobileMenuAsk, .questionResponseButton, .ctaButtonBack, .answerResponseShow, .answerResponseButton, .answerCommentResponseButton, .altsQuestionButton, .altsSearchButton {
   background: #FFBB2F;
   color: #6C4B00; }
-  /* line 58, ../sass/style.sass */
-  .questionResponseButton:hover, .ctaButtonBack:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
+  /* line 62, ../sass/style.sass */
+  .mobileMenuAsk:hover, .questionResponseButton:hover, .ctaButtonBack:hover, .answerResponseShow:hover, .answerResponseButton:hover, .answerCommentResponseButton:hover, .altsQuestionButton:hover, .altsSearchButton:hover {
     background: #db9a26; }
 
-/* line 61, ../sass/style.sass */
+/* line 65, ../sass/style.sass */
 .questionResponseTextarea {
   border-color: #06452A; }
 
-/* line 63, ../sass/style.sass */
+/* line 67, ../sass/style.sass */
 .answerWrapper {
   color: #4A4A4A; }
 
-/* line 65, ../sass/style.sass */
+/* line 69, ../sass/style.sass */
 .answerHeader {
   color: #009B58; }
 
-/* line 67, ../sass/style.sass */
+/* line 71, ../sass/style.sass */
 .answerCommentsHeader, .listItemHeader {
   color: #FFBB2F; }
 
-/* line 69, ../sass/style.sass */
+/* line 73, ../sass/style.sass */
 .context {
   background: #4A4A4A; }
 
-/* line 71, ../sass/style.sass */
+/* line 75, ../sass/style.sass */
 .cta {
   background: #378DF1; }
 
-/* line 74, ../sass/style.sass */
+/* line 78, ../sass/style.sass */
 .ctaButton .buttonDefault {
   color: #6C4B00;
   background: #FFBB2F; }
-/* line 77, ../sass/style.sass */
+/* line 81, ../sass/style.sass */
 .ctaButton .buttonHover {
   color: white;
   background: #009B58; }
 
-/* line 80, ../sass/style.sass */
+/* line 84, ../sass/style.sass */
 .alts {
   background: #4A4A4A; }
 
-/* line 83, ../sass/style.sass */
+/* line 87, ../sass/style.sass */
 .footer {
   background: #378DF1; }
 
-/* line 86, ../sass/style.sass */
+/* line 90, ../sass/style.sass */
 .footer-navigationTitle {
   color: black; }
 
-/* line 89, ../sass/style.sass */
+/* line 93, ../sass/style.sass */
 .footer-navigationLink {
   color: white; }
-  /* line 91, ../sass/style.sass */
+  /* line 95, ../sass/style.sass */
   .footer-navigationLink:hover {
     color: #0d294a; }
 
-/* line 95, ../sass/style.sass */
+/* line 99, ../sass/style.sass */
 .questionComments, .answerComments {
   margin-left: 36px;
   margin-top: 24px; }
+  @media screen and (max-width: 916px) {
+    /* line 99, ../sass/style.sass */
+    .questionComments, .answerComments {
+      margin-left: 0; } }
 
-/* line 98, ../sass/style.sass */
+/* line 104, ../sass/style.sass */
 .questionAuthor, .answerAuthor, .questionCommentAuthor, .answerCommentAuthor {
   font-weight: bold;
   text-align: right;
@@ -645,16 +704,16 @@ textarea {
   line-height: 24px;
   position: relative;
   top: 5.7px; }
-  /* line 86, ../sass/components.sass */
+  /* line 98, ../sass/components.sass */
   .questionAuthor .formal, .answerAuthor .formal, .questionCommentAuthor .formal, .answerCommentAuthor .formal {
     display: block;
     color: #378DF1;
     font-weight: bold; }
 
-/* line 98, ../sass/components.sass */
+/* line 110, ../sass/components.sass */
 .cta .ctaLogo {
-  padding-top: 24px; }
-/* line 100, ../sass/components.sass */
+  padding-top: 12px; }
+/* line 112, ../sass/components.sass */
 .cta .ctaHeader {
   padding-top: 12px;
   font-size: 28px;
@@ -663,14 +722,14 @@ textarea {
   top: 8.2px;
   text-align: center;
   font-weight: bold; }
-/* line 105, ../sass/components.sass */
+/* line 117, ../sass/components.sass */
 .cta .ctaButton {
   padding-top: 36px;
   cursor: pointer; }
-  /* line 176, ../sass/components.sass */
+  /* line 203, ../sass/components.sass */
   .cta .ctaButton .buttonLink {
     text-decoration: none;
-    width: 300px;
+    max-width: 300px;
     display: block;
     font-size: 18px;
     height: 48px;
@@ -680,7 +739,11 @@ textarea {
     margin: 0 auto;
     border: 0;
     transform: translate3d(0, 0, 0); }
-    /* line 141, ../sass/components.sass */
+    @media screen and (max-width: 916px) {
+      /* line 203, ../sass/components.sass */
+      .cta .ctaButton .buttonLink {
+        font-size: 18pxpx; } }
+    /* line 157, ../sass/components.sass */
     .cta .ctaButton .buttonLink svg {
       width: 48px;
       height: 48px;
@@ -688,10 +751,10 @@ textarea {
       position: relative;
       top: -2px;
       margin-left: -24px; }
-  /* line 180, ../sass/components.sass */
+  /* line 207, ../sass/components.sass */
   .cta .ctaButton .buttonHover {
     text-decoration: none;
-    width: 300px;
+    max-width: 300px;
     display: block;
     font-size: 18px;
     height: 48px;
@@ -702,7 +765,11 @@ textarea {
     border: 0;
     font-size: 14px;
     transform: rotateX(-90deg) translateZ(-24px); }
-    /* line 141, ../sass/components.sass */
+    @media screen and (max-width: 916px) {
+      /* line 207, ../sass/components.sass */
+      .cta .ctaButton .buttonHover {
+        font-size: 18pxpx; } }
+    /* line 157, ../sass/components.sass */
     .cta .ctaButton .buttonHover svg {
       width: 48px;
       height: 48px;
@@ -710,38 +777,42 @@ textarea {
       position: relative;
       top: -2px;
       margin-left: -24px; }
-  /* line 186, ../sass/components.sass */
+  /* line 213, ../sass/components.sass */
   .cta .ctaButton .buttonDefault {
     border-radius: 4px; }
-  /* line 190, ../sass/components.sass */
+  /* line 217, ../sass/components.sass */
   body.ie .cta .ctaButton .buttonHover {
     display: none; }
-  /* line 195, ../sass/components.sass */
+  /* line 222, ../sass/components.sass */
   body:not(.ie) .cta .ctaButton .hoverable {
     transition: all 150ms ease;
     transform-style: preserve-3d; }
-    /* line 199, ../sass/components.sass */
+    /* line 226, ../sass/components.sass */
     body:not(.ie) .cta .ctaButton .hoverable .buttonDefault {
       transform: translateZ(24px); }
-  /* line 201, ../sass/components.sass */
+  /* line 228, ../sass/components.sass */
   body:not(.ie) .cta .ctaButton:hover .hoverable {
     transform: rotateX(90deg); }
 
-/* line 102, ../sass/style.sass */
+/* line 108, ../sass/style.sass */
 .footerLogotype, .ctaLogo {
   display: block;
   margin: 0 auto;
   width: 197px;
   position: relative;
   top: 2px; }
-  /* line 115, ../sass/components.sass */
+  /* line 127, ../sass/components.sass */
   .footerLogotype .logotype-icon, .ctaLogo .logotype-icon {
     width: 197px;
     display: block;
     height: 48px; }
 
-/* line 105, ../sass/style.sass */
+/* line 111, ../sass/style.sass */
 .altsSearchLabel, .altsOtherLabel {
+  font-size: 18px;
+  line-height: 24px;
+  position: relative;
+  top: 5.7px;
   background: #4A4A4A;
   position: absolute;
   left: 50%;
@@ -749,17 +820,18 @@ textarea {
   top: -12px;
   margin: 0 auto;
   text-align: center;
-  transform: translateX(-50%); }
+  transform: translateX(-50%);
+  white-space: nowrap; }
 
-/* line 108, ../sass/style.sass */
+/* line 114, ../sass/style.sass */
 .contentWrapper {
   position: relative; }
 
-/* line 111, ../sass/style.sass */
+/* line 117, ../sass/style.sass */
 .altsSearchLabel {
   font-style: italic; }
 
-/* line 113, ../sass/style.sass */
+/* line 119, ../sass/style.sass */
 .questionCommentAuthor, .answerCommentAuthor {
   font-size: 14px;
   line-height: 24px;
@@ -767,6 +839,6 @@ textarea {
   top: 7.1px;
   margin-top: 0; }
 
-/* line 117, ../sass/style.sass */
+/* line 123, ../sass/style.sass */
 .answerWrapper {
   background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjQsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNTYwcHgiIGhlaWdodD0iMTBweCIgdmlld0JveD0iMCAwIDU2MCAxMC4wOSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNTYwIDEwLjA5IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxwYXRoIGZpbGw9IiMwMDlCNTgiIGQ9Ik0wLDBoNTYwYzAsMS4zNDYsMC0wLjY3MywwLDAuNTA0bC0yMC4wMTIsOS41ODZsLTIwLjAxMy05LjU4NmwtMjAuMDEzLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4Ng0KCQlsLTIwLjAxMi05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZMMzc5Ljg5LDEwLjA5bC0yMC4wMTMtOS41ODZsLTE5Ljg0NCw5LjU4NkwzMjAuMDIsMC41MDRsLTIwLjAxMiw5LjU4NkwyODAsMC41MDQNCgkJbC0yMC4wMTIsOS41ODZsLTIwLjAxNC05LjU4NmwtMjAuMDEyLDkuNTg2bC0yMC4wMTItOS41ODZsLTIwLjAxNCw5LjU4NmwtMjAuMDEyLTkuNTg2bC0yMC4wMTIsOS41ODZsLTIwLjAxMi05LjU4NmwtMTkuODQ0LDkuNTg2DQoJCUw4MC4wNDUsMC41MDRMNjAuMDMzLDEwLjA5TDQwLjAyMSwwLjUwNEwyMC4wMDgsMTAuMDlMMCwwLjUwNEMwLDAsMCwwLjE2OCwwLDB6Ii8+DQo8L2c+DQo8L3N2Zz4NCg==') white repeat-x; }

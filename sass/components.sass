@@ -17,6 +17,12 @@
 		span
 			padding-left: $iconSize+base(.5)
 			display: block
+	@media #{$mobileWidth}
+		+font-size($medium)
+		svg
+			display: none
+		span
+			padding-left: initial
 
 =h2
 	+font-size($medium)
@@ -29,7 +35,6 @@
 	padding-top: base()
 	text-align: center
 	font-weight: bold
-	padding-bottom: base(.5)
 
 =text
 	p
@@ -71,7 +76,7 @@
 	a:hover
 		border-bottom: 1px solid rgba(white, 1)
 
-=input
+=inputStyle
 	margin-top: base()
 	font-size: base()
 	padding-left: base(.5)
@@ -79,8 +84,15 @@
 	line-height: $button-height
 	border: 0
 	+borderRadius()
+
+=input
+	+inputStyle
 	width: $inputW
 
+=altInput
+	+inputStyle
+	flex: 1
+	margin-right: base(.5)
 
 =formal
 	.formal
@@ -96,7 +108,7 @@
 
 =ad
 	.ctaLogo
-		padding-top: base()
+		padding-top: base(.5)
 	.ctaHeader
 		padding-top: base(.5)
 		+font-size($large, $baseline*1.5)
@@ -118,6 +130,7 @@
 		height: base(2)
 
 =altLabel
+	+font-size($small)
 	background: $black
 	position: absolute
 	left: 50%
@@ -126,10 +139,11 @@
 	margin: 0 auto
 	text-align: center
 	transform: translateX(-50%)
+	white-space: nowrap
 
 =buttonStyle
 	text-decoration: none
-	width: $buttonW
+	max-width: $buttonW
 	display: block
 	font-size: $small
 	height: $button-height
@@ -138,6 +152,8 @@
 	text-align: center
 	margin: 0 auto
 	border: 0
+	@media #{$mobileWidth}
+		font-size: $small+px
 	svg
 		width: $button-height
 		height: $button-height
@@ -158,7 +174,18 @@
 	@else
 		float: inherit
 		display: inherit
-		padding: 0
+
+=mobileMenu
+	display: none
+	background: $black
+	text-align: center
+	position: fixed
+	bottom: 0
+	top: initial
+	width: 100%
+	padding: 0 4% base()
+	@media #{$mobileWidth}
+		display: block
 
 =expandable
 	>*
